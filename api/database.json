@@ -14,12 +14,18 @@
             "id": 3,
             "name": "Chin Ups",
             "type": "Upper"
+        },
+        {
+            "id": 4,
+            "name": "Lunges",
+            "type": "Lower"
         }
     ],
     "routines": [
         {
             "id": 1,
-            "name": "Monday",
+            "userId": 1,
+            "name": "Monday Session",
             "date": "03/15/2021",
             "workoutId": 1
             

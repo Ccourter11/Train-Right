@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter as Router } from "react-router-dom"
+import { Train } from "./components/Train"
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router >
+    <Train />
+   </Router >
   </React.StrictMode>,
   document.getElementById('root')
 );

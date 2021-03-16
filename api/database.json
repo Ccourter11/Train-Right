@@ -2,7 +2,18 @@
     "workouts": [
         {
             "id": 1,
-            "name": "Push Ups"
+            "name": "Push Ups",
+            "type": "Upper"
+        },
+        {
+            "id": 2,
+            "name": "Pull Ups",
+            "type": "Upper"
+        },
+        {
+            "id": 3,
+            "name": "Chin Ups",
+            "type": "Upper"
         }
     ],
     "routines": [
@@ -11,6 +22,7 @@
             "name": "Monday",
             "date": "03/15/2021",
             "workoutId": 1
+            
         }
     ], 
     "users": [

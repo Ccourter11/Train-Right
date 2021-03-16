@@ -4,7 +4,8 @@ import { Route, Redirect } from "react-router-dom"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import { userStorageKey } from "./auth/authSettings"
-import { ApplicationViews } from "./ApplicationViews";
+import { ApplicationViews } from "./ApplicationViews"
+import { NavBar } from "./nav/NavBar";
 
 
 export const Train = () => (
@@ -13,7 +14,11 @@ export const Train = () => (
         if (sessionStorage.getItem(userStorageKey)) {
           return (
             <>
-              <ApplicationViews />
+            <NavBar />
+             <ApplicationViews />
+             
+              
+        
             </>
           )
         } else {

@@ -9,6 +9,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Router >
     <Train />
+    
    </Router >
   </React.StrictMode>,
   document.getElementById('root')

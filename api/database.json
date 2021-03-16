@@ -12,5 +12,11 @@
             "date": "03/15/2021",
             "workoutId": 1
         }
+    ], 
+    "users": [
+        {
+            "id": 1,
+            "email": "courter@yahoo.com"
+        }
     ]
 }

@@ -1,0 +1,16 @@
+{
+    "workouts": [
+        {
+            "id": 1,
+            "name": "Push Ups"
+        }
+    ],
+    "routines": [
+        {
+            "id": 1,
+            "name": "Monday",
+            "date": "03/15/2021",
+            "workoutId": 1
+        }
+    ]
+}

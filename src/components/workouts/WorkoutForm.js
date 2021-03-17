@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react"
 import { useHistory } from "react-router-dom"
 import { WorkoutContext } from "./WorkoutProvider"
+import "./Workout.css"
 
 
 export const WorkoutForm = () => {

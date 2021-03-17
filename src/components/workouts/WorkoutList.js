@@ -20,7 +20,7 @@ export const WorkoutList = () => {
 
       return (
         <>  
-        <h2 className="employees__title">Workouts</h2>
+        <h2 className="workouts__title">Workouts</h2>
         <button onClick={() => history.push("/workouts/create")}>
           Create Workout
         </button>

@@ -1,36 +1,19 @@
 // My Main App Component
 
-import { Route, Redirect } from "react-router-dom"
-import { Login } from "./auth/Login"
-import { Register } from "./auth/Register"
-import { userStorageKey } from "./auth/authSettings"
 import { ApplicationViews } from "./ApplicationViews"
 import { NavBar } from "./nav/NavBar";
 
+// NavBar is the presentation component
+// ApplicationViews is the controller component
 
-export const Train = () => (
-<>
-    <Route render={() => {
-        if (sessionStorage.getItem(userStorageKey)) {
+export const Train = () => {
+ 
           return (
-            <>
+            <>          
              <NavBar />
              <ApplicationViews />
-             
         
             </>
           )
-        } else {
-          return <Redirect to="/login" />;
-        }
-    }} />
-
-    <Route path="/login">
-      <Login />
-    </Route>
-    <Route path="/register">
-      <Register />
-    </Route>
-</>
  
- );
+          };

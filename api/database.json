@@ -19,7 +19,7 @@
       "name": "Chin Ups",
       "type": "Upper",
       "reps": "8-10",
-      "sets": "2-5"
+      "sets": "2"
     },
     {
       "id": 4,
@@ -27,20 +27,24 @@
       "type": "Lower",
       "reps": "25",
       "sets": "4"
-    },
-    {
-      "name": "One armed pull ups",
-      "upper": true,
-      "reps": "1-2",
-      "sets":"2",
-      "id": 5
-    },
-    {
-      "name": "Forearm curls",
-      "reps": "14",
-      "upper": true,
-      "id": 6
     }
+  ],
+  "workoutRoutines": [
+      {
+        "workoutsId": 1,
+        "routinesId": 1,
+        "id":1
+      },
+      {
+        "workoutsId": 2,
+        "routinesId": 1,
+        "id":2
+      },
+      {
+        "workoutsId": 3,
+        "routinesId": 1,
+        "id":3
+      }
   ],
   "routines": [
     {

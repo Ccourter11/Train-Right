@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react"
 import { useHistory } from "react-router-dom"
 import { WorkoutContext } from "./WorkoutProvider"
+import "./Workout.css"
 
 
 export const WorkoutForm = () => {
@@ -23,7 +24,7 @@ export const WorkoutForm = () => {
         }
     
         if (event.target.type === "radio"){
-          newWorkout[event.target.className] = (setValue === "true")
+          newWorkout[event.target.className] = (setValue === "upper")
         } else {
           newWorkout[event.target.id] = setValue
         }
@@ -49,7 +50,7 @@ export const WorkoutForm = () => {
             <label htmlFor="name">Name: </label>
             <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus placeholder="Name..."></input>
           </fieldset>
-                    <fieldset className="form-group">
+        <fieldset className="form-group">
             <label htmlFor="upper">Upper Body: </label>
             <input type="radio" name="upper" className="upper" value="true" onChange={handleControlledInputChange} />
             <label htmlFor="true">Yes</label>
@@ -59,6 +60,10 @@ export const WorkoutForm = () => {
           <fieldset className="form-group">
             <label htmlFor="reps">Reps: </label>
             <input type="number" id="reps" onChange={handleControlledInputChange} required></input>
+          </fieldset>
+          <fieldset className="form-group">
+            <label htmlFor="reps">Sets: </label>
+            <input type="number" id="sets" onChange={handleControlledInputChange} required></input>
           </fieldset>
           <button className="btn" onClick={handleSaveWorkout}>
             Save Workout

@@ -1,40 +1,45 @@
 {
-    "workouts": [
-        {
-            "id": 1,
-            "name": "Push Ups",
-            "type": "Upper"
-        },
-        {
-            "id": 2,
-            "name": "Pull Ups",
-            "type": "Upper"
-        },
-        {
-            "id": 3,
-            "name": "Chin Ups",
-            "type": "Upper"
-        },
-        {
-            "id": 4,
-            "name": "Lunges",
-            "type": "Lower"
-        }
-    ],
-    "routines": [
-        {
-            "id": 1,
-            "userId": 1,
-            "name": "Monday Session",
-            "date": "03/15/2021",
-            "workoutId": 1
-            
-        }
-    ], 
-    "users": [
-        {
-            "id": 1,
-            "email": "courter@yahoo.com"
-        }
-    ]
+  "workouts": [
+    {
+      "id": 1,
+      "name": "Push Ups",
+      "type": "Upper"
+    },
+    {
+      "id": 2,
+      "name": "Pull Ups",
+      "type": "Upper"
+    },
+    {
+      "id": 3,
+      "name": "Chin Ups",
+      "type": "Upper"
+    },
+    {
+      "id": 4,
+      "name": "Lunges",
+      "type": "Lower"
+    },
+    {
+      "name": "One armed pull ups",
+      "upper": true,
+      "reps": "",
+      "id": 5
+    }
+  ],
+  "routines": [
+    {
+      "id": 1,
+      "userId": 1,
+      "name": "Monday Session",
+      "date": "03/15/2021",
+      "workoutId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "email": "courter@yahoo.com"
+    }
+  ]
 }

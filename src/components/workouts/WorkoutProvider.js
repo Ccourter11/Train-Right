@@ -16,7 +16,16 @@ const getWorkouts = () => {
       .then(workoutsData => setWorkouts(workoutsData))
   }
 
-  
+  const addWorkout = workoutObj => {
+    return fetch("http://localhost:8088/Workouts", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(workoutObj)
+    })
+    .then(getWorkouts)
+}
 
    /*
       You return a context provider which has the
@@ -26,7 +35,7 @@ const getWorkouts = () => {
       return (
         <WorkoutContext.Provider value={{
           
-          workouts, getWorkouts
+          workouts, getWorkouts, addWorkout
         }}>
           {props.children}
         </WorkoutContext.Provider>

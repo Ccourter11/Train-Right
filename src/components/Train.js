@@ -14,10 +14,9 @@ export const Train = () => (
         if (sessionStorage.getItem(userStorageKey)) {
           return (
             <>
-            <NavBar />
+             <NavBar />
              <ApplicationViews />
              
-              
         
             </>
           )

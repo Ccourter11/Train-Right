@@ -3,35 +3,50 @@
     {
       "id": 1,
       "name": "Push Ups",
-      "type": "Upper"
+      "type": "Upper",
+      "reps": "10",
+      "sets": "3-5"
     },
     {
       "id": 2,
       "name": "Pull Ups",
-      "type": "Upper"
+      "type": "Upper",
+      "reps": "8-10",
+      "sets": "2-4"
     },
     {
       "id": 3,
       "name": "Chin Ups",
-      "type": "Upper"
+      "type": "Upper",
+      "reps": "8-10",
+      "sets": "2-5"
     },
     {
       "id": 4,
       "name": "Lunges",
-      "type": "Lower"
+      "type": "Lower",
+      "reps": "25",
+      "sets": "4"
     },
     {
       "name": "One armed pull ups",
       "upper": true,
-      "reps": "",
+      "reps": "1-2",
+      "sets":"2",
       "id": 5
+    },
+    {
+      "name": "Forearm curls",
+      "reps": "14",
+      "upper": true,
+      "id": 6
     }
   ],
   "routines": [
     {
       "id": 1,
       "userId": 1,
-      "name": "Monday Session",
+      "routineName": "Monday Session",
       "date": "03/15/2021",
       "workoutId": 1
     }

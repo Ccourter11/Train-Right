@@ -4,6 +4,8 @@ import { Home } from "./Home"
 import { WorkoutList } from "./workouts/WorkoutList"
 import { WorkoutProvider } from "./workouts/WorkoutProvider"
 import { WorkoutForm } from "./workouts/WorkoutForm"
+import { RoutineProvider } from "./routine/RoutineProvider"
+import { RoutineList } from "./routine/RoutineList"
 
 
 export const ApplicationViews = () => {
@@ -25,6 +27,12 @@ export const ApplicationViews = () => {
             </WorkoutProvider>
 
 
+        <RoutineProvider >
+        <Route path="/routines">
+                <RoutineList />
+             </Route>
+        </RoutineProvider>
+
         </>
-  )
+  ) 
 }

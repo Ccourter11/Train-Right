@@ -19,7 +19,7 @@
       "name": "Chin Ups",
       "type": "Upper",
       "reps": "8-10",
-      "sets": "2-5"
+      "sets": "2"
     },
     {
       "id": 4,
@@ -31,15 +31,30 @@
     {
       "name": "One armed pull ups",
       "upper": true,
-      "reps": "1-2",
-      "sets":"2",
+      "reps": "2",
+      "sets": "2",
       "id": 5
     },
     {
       "name": "Forearm curls",
       "reps": "14",
+      "sets": "2",
       "upper": true,
       "id": 6
+    },
+    {
+      "name": "KAtie squat",
+      "upper": false,
+      "reps": "8",
+      "sets": "5",
+      "id": 7
+    },
+    {
+      "name": "Tsizzle",
+      "upper": false,
+      "reps": "200",
+      "sets": "5",
+      "id": 8
     }
   ],
   "routines": [

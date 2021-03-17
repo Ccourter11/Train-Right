@@ -3,6 +3,7 @@ import { Route } from "react-router-dom"
 import { Home } from "./Home"
 import { WorkoutList } from "./workouts/WorkoutList"
 import { WorkoutProvider } from "./workouts/WorkoutProvider"
+import { WorkoutForm } from "./workouts/WorkoutForm"
 
 
 export const ApplicationViews = () => {
@@ -13,12 +14,15 @@ export const ApplicationViews = () => {
           <Home />
         </Route>
 
-        <Route path="/workouts">
             <WorkoutProvider>
+              <Route path="/workouts">
                 <WorkoutList />
-                
+             </Route>
+
+             <Route exact path="/workouts/create">
+               <WorkoutForm />
+              </Route>
             </WorkoutProvider>
-         </Route>
 
 
         </>

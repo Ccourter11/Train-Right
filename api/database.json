@@ -55,6 +55,13 @@
       "reps": "200",
       "sets": "5",
       "id": 8
+    },
+    {
+      "name": "Squats",
+      "upper": false,
+      "reps": "12",
+      "sets": "3",
+      "id": 9
     }
   ],
   "routines": [

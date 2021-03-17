@@ -27,24 +27,31 @@
       "type": "Lower",
       "reps": "25",
       "sets": "4"
+    },
+    {
+      "name": "Code more",
+      "upper": false,
+      "reps": "2",
+      "sets": "3",
+      "id": 5
     }
   ],
   "workoutRoutines": [
-      {
-        "workoutsId": 1,
-        "routinesId": 1,
-        "id":1
-      },
-      {
-        "workoutsId": 2,
-        "routinesId": 1,
-        "id":2
-      },
-      {
-        "workoutsId": 3,
-        "routinesId": 1,
-        "id":3
-      }
+    {
+      "workoutsId": 1,
+      "routinesId": 1,
+      "id": 1
+    },
+    {
+      "workoutsId": 2,
+      "routinesId": 1,
+      "id": 2
+    },
+    {
+      "workoutsId": 3,
+      "routinesId": 1,
+      "id": 3
+    }
   ],
   "routines": [
     {

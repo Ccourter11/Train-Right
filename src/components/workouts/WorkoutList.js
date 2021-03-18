@@ -32,7 +32,6 @@ export const WorkoutList = () => {
           Create Workout
         </button>
         <div className="workouts">
-            {console.log(workouts)}
         {
         workouts.map(workout => {
           return <WorkoutCard key={workout.id} workouts={workout} />

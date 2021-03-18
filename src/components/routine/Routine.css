@@ -1,15 +1,10 @@
-.workouts {
+.routines {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  .workout {
-    flex-basis: 28%;
-    margin: 1em;
-    padding: 1em;
-    border: 1px solid rgb(23, 22, 19);
-  }
-  .workoutRoutine {
+  
+  .routine {
       flex-basis: 28%;
       margin: 1em;
       padding: 1em;

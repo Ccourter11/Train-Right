@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from "react"
 import { WorkoutContext } from "./WorkoutProvider"
 import "./Workout.css"
-import { useParams, useHistory } from "react-router-dom"
+import { useParams } from "react-router-dom"
 
 
 export const WorkoutDetail = () => {
     const { getWorkoutById } = useContext(WorkoutContext)
-    const [workout, setWorkout] = useState({})
+    const [workouts, setWorkout] = useState({})
       
     const {workoutId} = useParams();
       // include useParams from react-router-dom to allow the app to read a parameter from the URL
@@ -22,10 +22,10 @@ export const WorkoutDetail = () => {
       }, [])
   
     return (
-      <div className="workout">
-        <h3 className="workout__name">{workout.name}</h3> 
-        <div className="workout__type">{workout.type}</div>
-        <div className="workout__name">Workouts: {workout.routine?.name}</div> 
+      <div className="workoutRoutine">
+        <h3 className="workout__name">Name: {workouts.name}</h3> 
+        <div className="workout__type">Type: {workouts.type}</div>
+        <div className="workout__name">Workouts: {workouts.routine?.name}</div> 
       </div>
     )
   }

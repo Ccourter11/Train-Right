@@ -38,13 +38,6 @@ export const ApplicationViews = () => {
              </Route>
              
         </RoutineProvider>
-
-          {/* <WorkoutProvider>
-                <Route exact path="/workouts/detail/:propsId(\d+)">
-                    <WorkoutDetail />
-                </Route>
-         </WorkoutProvider> */}
-
         </>
   ) 
 }

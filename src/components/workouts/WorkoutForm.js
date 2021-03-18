@@ -10,7 +10,7 @@ export const WorkoutForm = () => {
     const history = useHistory()
     const [workout, setWorkout] = useState({
         "name": "",
-        "type": undefined,
+        "type": "",
     })
 
     // Add a conditional to make sure all fields are complete
@@ -35,8 +35,8 @@ export const WorkoutForm = () => {
       const handleSaveWorkout = (event) => {
         event.preventDefault()
     
-        if (workout.locationId === 0){
-          window.alert("You must choose a location!")
+        if (workout.name === ""){
+          window.alert("You must create a name for this workout!")
         } else {
           addWorkout(workout)
           .then(history.push("/workouts"))
@@ -50,12 +50,9 @@ export const WorkoutForm = () => {
             <label htmlFor="name">Name: </label>
             <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus placeholder="Name..."></input>
           </fieldset>
-        <fieldset className="form-group">
-            <label htmlFor="upper">Upper Body: </label>
-            <input type="radio" name="upper" className="upper" value="true" onChange={handleControlledInputChange} />
-            <label htmlFor="true">Yes</label>
-            <input type="radio" name="upper" className="upper" value="false" onChange={handleControlledInputChange} />
-            <label htmlFor="false">No</label>
+          <fieldset className="form-group">
+            <label htmlFor="reps">Types: </label>
+            <input type="text" id="type" onChange={handleControlledInputChange} required></input>
           </fieldset>
           <fieldset className="form-group">
             <label htmlFor="reps">Reps: </label>

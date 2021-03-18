@@ -6,6 +6,7 @@ import { WorkoutProvider } from "./workouts/WorkoutProvider"
 import { WorkoutForm } from "./workouts/WorkoutForm"
 import { RoutineProvider } from "./routine/RoutineProvider"
 import { RoutineList } from "./routine/RoutineList"
+import { WorkoutDetail } from "./workouts/WorkoutDetail"
 
 
 export const ApplicationViews = () => {
@@ -16,6 +17,7 @@ export const ApplicationViews = () => {
           <Home />
         </Route>
 
+        <RoutineProvider >
             <WorkoutProvider>
               <Route path="/workouts">
                 <WorkoutList />
@@ -24,14 +26,24 @@ export const ApplicationViews = () => {
              <Route exact path="/workouts/create">
                <WorkoutForm />
               </Route>
+
+              <Route exact path="/routines/detail/:workoutId(\d+)">
+                  <WorkoutDetail/>
+                  <RoutineList />
+                </Route>
             </WorkoutProvider>
 
 
-        <RoutineProvider >
-        <Route path="/routines">
-                <RoutineList />
+           <Route path="/routines">
              </Route>
+             
         </RoutineProvider>
+
+          {/* <WorkoutProvider>
+                <Route exact path="/workouts/detail/:propsId(\d+)">
+                    <WorkoutDetail />
+                </Route>
+         </WorkoutProvider> */}
 
         </>
   ) 

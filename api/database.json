@@ -22,29 +22,29 @@
       "sets": "2"
     },
     {
-      "id": 4,
-      "name": "Lunges",
+      "name": "Philly special",
       "type": "Lower",
-      "reps": "25",
-      "sets": "4"
+      "reps": "2",
+      "sets": "2",
+      "id": 4
     }
   ],
   "workoutRoutines": [
-      {
-        "workoutsId": 1,
-        "routinesId": 1,
-        "id":1
-      },
-      {
-        "workoutsId": 2,
-        "routinesId": 1,
-        "id":2
-      },
-      {
-        "workoutsId": 3,
-        "routinesId": 1,
-        "id":3
-      }
+    {
+      "workoutsId": 1,
+      "routinesId": 1,
+      "id": 1
+    },
+    {
+      "workoutsId": 2,
+      "routinesId": 1,
+      "id": 2
+    },
+    {
+      "workoutsId": 3,
+      "routinesId": 1,
+      "id": 3
+    }
   ],
   "routines": [
     {
@@ -53,6 +53,13 @@
       "routineName": "Monday Session",
       "date": "03/15/2021",
       "workoutId": 1
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "routineName": "Legs babyy",
+      "date": "03/18/2021",
+      "workoutId": 4
     }
   ],
   "users": [

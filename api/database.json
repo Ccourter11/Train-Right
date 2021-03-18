@@ -34,6 +34,13 @@
       "reps": "2",
       "sets": "3",
       "id": 5
+    },
+    {
+      "name": "blu",
+      "upper": false,
+      "reps": "1000",
+      "sets": "19",
+      "id": 6
     }
   ],
   "workoutRoutines": [

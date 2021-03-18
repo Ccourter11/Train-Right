@@ -10,6 +10,7 @@ export const WorkoutDetail = () => {
       const [workout, setWorkout] = useState({})
   
       const {workoutId} = useParams();
+      // include useParams from react-router-dom to allow the app to read a parameter from the URL
       const history = useHistory();
   
   
@@ -23,8 +24,9 @@ export const WorkoutDetail = () => {
   
     return (
       <section className="workout">
-        <h3 className="workout__name">{workout.name}</h3>
+        {/* <h3 className="workout__name">{workout.name}</h3> */}
         <div className="workout__type">{workout.type}</div>
+        <div className="workout__name">Location: {workout.routine?.name}</div>
       </section>
     )
   }

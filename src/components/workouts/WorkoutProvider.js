@@ -26,6 +26,10 @@ const getWorkouts = () => {
     })
     .then(getWorkouts)
 }
+const getWorkoutById = (id) => {
+  return fetch(`http://localhost:8088/workouts/${id}?_expand=routines`)
+      .then(res => res.json())
+}
 
    /*
       You return a context provider which has the
@@ -35,7 +39,7 @@ const getWorkouts = () => {
       return (
         <WorkoutContext.Provider value={{
           
-          workouts, getWorkouts, addWorkout
+          workouts, getWorkouts, addWorkout, getWorkoutById
         }}>
           {props.children}
         </WorkoutContext.Provider>

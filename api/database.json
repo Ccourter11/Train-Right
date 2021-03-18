@@ -22,11 +22,11 @@
       "sets": "2"
     },
     {
-      "id": 4,
-      "name": "Lunges",
+      "name": "Philly special",
       "type": "Lower",
-      "reps": "25",
-      "sets": "4"
+      "reps": "2",
+      "sets": "2",
+      "id": 4
     }
   ],
   "workoutRoutines": [

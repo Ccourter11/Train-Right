@@ -8,8 +8,6 @@ export const WorkoutProvider = (props) => {
 // Next, you will use the useState() hook to define a variable that holds the state of the component, and a function that updates it
 const [workouts, setWorkouts] = useState([])
 
-
-
 const getWorkouts = () => {
     return fetch("http://localhost:8088/workouts")
       .then(response => response.json())
@@ -17,7 +15,7 @@ const getWorkouts = () => {
   }
 
   const addWorkout = workoutObj => {
-    return fetch("http://localhost:8088/Workouts", {
+    return fetch("http://localhost:8088/workouts", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -25,11 +23,11 @@ const getWorkouts = () => {
         body: JSON.stringify(workoutObj)
     })
     .then(getWorkouts)
-}
-const getWorkoutById = (id) => {
-  return fetch(`http://localhost:8088/workouts/${id}?_expand=routines`)
-      .then(res => res.json())
-}
+  }
+  const getWorkoutById = (id) => {
+    return fetch(`http://localhost:8088/workouts/${id}?_expand=routines`)
+        .then(res => res.json())
+  }
 
    /*
       You return a context provider which has the

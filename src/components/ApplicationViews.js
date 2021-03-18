@@ -17,6 +17,7 @@ export const ApplicationViews = () => {
           <Home />
         </Route>
 
+        <RoutineProvider >
             <WorkoutProvider>
               <Route path="/workouts">
                 <WorkoutList />
@@ -26,16 +27,16 @@ export const ApplicationViews = () => {
                <WorkoutForm />
               </Route>
 
-              <Route exact path="/workouts/detail/:workoutId(\d+)">
+              <Route exact path="/routines/detail/:workoutId(\d+)">
                   <WorkoutDetail/>
+                  <RoutineList />
                 </Route>
             </WorkoutProvider>
 
 
-        <RoutineProvider >
-        <Route path="/routines">
-                <RoutineList />
+           <Route path="/routines">
              </Route>
+             
         </RoutineProvider>
 
           {/* <WorkoutProvider>

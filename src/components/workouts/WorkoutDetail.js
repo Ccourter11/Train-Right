@@ -29,19 +29,3 @@ export const WorkoutDetail = () => {
       </div>
     )
   }
-
-  // <div className="location">
-  //           <h3 className="location_name">{location.name}</h3>
-  //           <div className="location_address">{location.address}</div>
-  //           <h4>Employees</h4>
-  //           <ul>
-  //               {location.employees?.map(employee => <li key={employee.id}>{employee.name}</li>)}
-  //           </ul>
-  //           <h4>Current Residents</h4>
-  //           <ul>
-  //               {location.animals?.map(animal => <li key ={animal.id}>{animal.name}</li>)}
-  //           </ul>
-  //           <button onClick={() => {
-  //               history.push(`/locations/edit/${location.id}`)
-  //           }}>Edit</button>
-  //       </div>

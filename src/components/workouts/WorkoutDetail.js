@@ -26,7 +26,7 @@ export const WorkoutDetail = () => {
       <section className="workout">
         {/* <h3 className="workout__name">{workout.name}</h3> */}
         <div className="workout__type">{workout.type}</div>
-        <div className="workout__name">Location: {workout.routine?.name}</div>
+        <div className="workout__name">Name: {workout.routine?.name}</div>
       </section>
     )
   }

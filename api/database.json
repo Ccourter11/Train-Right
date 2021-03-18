@@ -27,20 +27,6 @@
       "type": "Lower",
       "reps": "25",
       "sets": "4"
-    },
-    {
-      "name": "Code more",
-      "upper": false,
-      "reps": "2",
-      "sets": "3",
-      "id": 5
-    },
-    {
-      "name": "blu",
-      "upper": false,
-      "reps": "1000",
-      "sets": "19",
-      "id": 6
     }
   ],
   "workoutRoutines": [
@@ -67,6 +53,13 @@
       "routineName": "Monday Session",
       "date": "03/15/2021",
       "workoutId": 1
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "routineName": "Legs babyy",
+      "date": "03/18/2021",
+      "workoutId": 4
     }
   ],
   "users": [

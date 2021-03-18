@@ -6,7 +6,7 @@ export const WorkoutCard = (props) => (
     <section className="workout">
         <h3 className="workout__name">
       <Link to={`/workouts/detail/${props.id}`}>
-        {props.name}
+        {props.workouts.name}
       </Link>
     </h3>
         {/* <h4 className="workout__name">{props.workouts.name}</h4> */}

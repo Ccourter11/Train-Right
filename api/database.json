@@ -27,6 +27,20 @@
       "reps": "2",
       "sets": "2",
       "id": 4
+    },
+    {
+      "name": "Super Squat",
+      "type": "Lower",
+      "reps": "4",
+      "sets": "1",
+      "id": 5
+    },
+    {
+      "name": "Trent lift",
+      "type": "Lower",
+      "reps": "2",
+      "sets": "2",
+      "id": 6
     }
   ],
   "workoutRoutines": [
@@ -66,6 +80,11 @@
     {
       "id": 1,
       "email": "courter@yahoo.com"
+    },
+    {
+      "email": "katie@gmail.com",
+      "name": "Katie Kline",
+      "id": 2
     }
   ]
 }

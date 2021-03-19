@@ -28,9 +28,11 @@ export const WorkoutList = () => {
       return (
         <>  
         <h2 className="workouts__title">Workouts</h2>
+        <div className="createBtn">
         <button onClick={() => history.push("/workouts/create")}>
           Create Workout
         </button>
+        </div>
         <div className="workouts">
         {
         workouts.map(workout => {

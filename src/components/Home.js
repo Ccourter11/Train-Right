@@ -1,12 +1,14 @@
 import React from "react"
-// import { WorkoutCard } from "./workouts/WorkoutCard"
+import "./Home.css"
 
 export const Home = () => {
   
     return (
       <>
         {console.log("render jsx")}
-       <h1>Welcome To Train Right!</h1>
+        <div>
+       <h1 className="home__title">Welcome To Train Right!</h1>
+       </div>
       </>
     )
   }

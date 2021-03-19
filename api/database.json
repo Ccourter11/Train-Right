@@ -1,25 +1,25 @@
 {
   "workouts": [
     {
-      "id": 1,
       "name": "Push Ups",
       "type": "Upper",
       "reps": "10",
-      "sets": "3-5"
+      "sets": "3-5",
+      "id": 1
     },
     {
-      "id": 2,
       "name": "Pull Ups",
       "type": "Upper",
       "reps": "8-10",
-      "sets": "2-4"
+      "sets": "2-4",
+      "id": 2
     },
     {
-      "id": 3,
       "name": "Chin Ups",
       "type": "Upper",
       "reps": "8-10",
-      "sets": "2"
+      "sets": "2",
+      "id": 3
     },
     {
       "name": "Philly special",
@@ -27,6 +27,20 @@
       "reps": "2",
       "sets": "2",
       "id": 4
+    },
+    {
+      "name": "Super Squat",
+      "type": "Lower",
+      "reps": "4",
+      "sets": "1",
+      "id": 5
+    },
+    {
+      "name": "Trent lift",
+      "type": "Lower",
+      "reps": "2",
+      "sets": "2",
+      "id": 6
     }
   ],
   "workoutRoutines": [
@@ -66,6 +80,11 @@
     {
       "id": 1,
       "email": "courter@yahoo.com"
+    },
+    {
+      "email": "katie@gmail.com",
+      "name": "Katie Kline",
+      "id": 2
     }
   ]
 }

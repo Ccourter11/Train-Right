@@ -25,8 +25,18 @@ const getWorkouts = () => {
     .then(getWorkouts)
   }
   const getWorkoutById = (id) => {
-    return fetch(`http://localhost:8088/workouts/${id}?_expand=routines`)
+    return fetch(`http://localhost:8088/workouts/${id}`)
         .then(res => res.json())
+  }
+  const updateWorkout = workouts => {
+    return fetch(`http://localhost:8088/workouts/${workouts.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(workouts)
+    })
+    .then(getWorkouts)
   }
 
    /*
@@ -37,7 +47,7 @@ const getWorkouts = () => {
       return (
         <WorkoutContext.Provider value={{
           
-          workouts, getWorkouts, addWorkout, getWorkoutById
+          workouts, getWorkouts, addWorkout, getWorkoutById, updateWorkout
         }}>
           {props.children}
         </WorkoutContext.Provider>

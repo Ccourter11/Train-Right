@@ -5,7 +5,7 @@ import "./Workout.css"
 
 
 export const WorkoutForm = () => {
-    const { addWorkout } = useContext(WorkoutContext) 
+    const { addWorkout, updateWorkout } = useContext(WorkoutContext) 
 
     const history = useHistory()
     const [workout, setWorkout] = useState({
@@ -22,10 +22,7 @@ export const WorkoutForm = () => {
         if (event.target.id.includes("Id")){
           setValue = parseInt(setValue)
         }
-    
-        if (event.target.type === "radio"){
-          newWorkout[event.target.className] = (setValue === "upper")
-        } else {
+         else {
           newWorkout[event.target.id] = setValue
         }
     
@@ -51,7 +48,7 @@ export const WorkoutForm = () => {
             <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus placeholder="Name..."></input>
           </fieldset>
           <fieldset className="form-group">
-            <label htmlFor="reps">Types: </label>
+            <label htmlFor="reps">Type: </label>
             <input type="text" id="type" onChange={handleControlledInputChange} required></input>
           </fieldset>
           <fieldset className="form-group">

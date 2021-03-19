@@ -31,20 +31,17 @@ export const ApplicationViews = () => {
                   <WorkoutDetail/>
                   <RoutineList />
                 </Route>
-            </WorkoutProvider>
 
+            <Route path="/workouts/edit/:workoutId(\d+)">
+                    <WorkoutForm/>
+                </Route>
 
            <Route path="/routines">
              </Route>
+            </WorkoutProvider>
              
         </RoutineProvider>
-
-          {/* <WorkoutProvider>
-                <Route exact path="/workouts/detail/:propsId(\d+)">
-                    <WorkoutDetail />
-                </Route>
-         </WorkoutProvider> */}
-
+        
         </>
   ) 
 }

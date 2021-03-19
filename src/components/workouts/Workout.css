@@ -2,6 +2,13 @@
   display: flex;
   justify-content: center;
 }
+.typeBtn {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  margin-left: 42.3%;
+
+}
 .workouts__title {
   display: flex;
   justify-content: center;

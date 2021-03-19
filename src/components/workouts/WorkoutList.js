@@ -37,8 +37,10 @@ export const WorkoutList = () => {
         </button>
         </div>
         <div className="workouts">
+          <div className="typeBtn">
           <button onClick={() => setFilteredWorkouts(workouts.filter(workout=> workout.type === "Upper"))}>Upper</button>
           <button onClick={() => setFilteredWorkouts(workouts.filter(workout=> workout.type === "Lower"))}>Lower</button>
+          </div>
         {
         filteredWorkouts.map(workout => {
           return <WorkoutCard key={workout.id} workouts={workout} />

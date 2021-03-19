@@ -28,13 +28,13 @@ const getWorkouts = () => {
     return fetch(`http://localhost:8088/workouts/${id}`)
         .then(res => res.json())
   }
-  const updateWorkout = workoutObj => {
-    return fetch(`http://localhost:8088/workouts/${workoutObj.id}`, {
+  const updateWorkout = workouts => {
+    return fetch(`http://localhost:8088/workouts/${workouts.id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(workoutObj)
+        body: JSON.stringify(workouts)
     })
     .then(getWorkouts)
   }

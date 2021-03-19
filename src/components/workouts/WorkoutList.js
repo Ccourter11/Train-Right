@@ -1,6 +1,8 @@
-import React, { useEffect, useContext } from "react"
+import React, { useEffect, useContext, useState } from "react"
 import { WorkoutCard } from "./WorkoutCard"
 import "./Workout.css"
+
+
 
 // The useContext hook, @ line 12, allows you to use data structures and functions that a parent provider, for instance the WorkoutProvider @ line 38, component exposes.
 // To start, you need to import the context object you created in the provider component so that the Context hook can access the objects it exposes
@@ -11,6 +13,7 @@ import { useHistory } from "react-router-dom" // import from libraries before yo
 export const WorkoutList = () => {
     // This state changes when `getWorkouts()` is invoked below
     const { workouts, getWorkouts } = useContext(WorkoutContext)
+    const [filteredWorkouts, setFilteredWorkouts] = useState([])
 
 
     const history = useHistory()
@@ -34,8 +37,10 @@ export const WorkoutList = () => {
         </button>
         </div>
         <div className="workouts">
+          <button onClick={() => setFilteredWorkouts(workouts.filter(workout=> workout.type === "Upper"))}>Upper</button>
+          <button onClick={() => setFilteredWorkouts(workouts.filter(workout=> workout.type === "Lower"))}>Lower</button>
         {
-        workouts.map(workout => {
+        filteredWorkouts.map(workout => {
           return <WorkoutCard key={workout.id} workouts={workout} />
         })
         }

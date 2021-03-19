@@ -9,5 +9,6 @@ export const WorkoutCard = (props) => (
         {props.workouts.name}
       </Link>
       </h3>
+      <button>Add</button>
     </section>
 )

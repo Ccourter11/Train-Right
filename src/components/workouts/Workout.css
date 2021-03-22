@@ -3,7 +3,7 @@
   justify-content: center;
 }
 .typeBtn {
-  display: flex;
+  display: grid;
   
   
 }
@@ -11,12 +11,11 @@
   display: flex;
   justify-content: center;
 }
-.workouts {
+/* .workouts {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
- 
-  }
+  } */
 .workout {
     flex-basis: 28%;
     margin: 1em;

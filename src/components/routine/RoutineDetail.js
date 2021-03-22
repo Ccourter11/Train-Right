@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useState } from "react"
-import { RoutineContext } from "./WorkoutProvider"
-import "./Workout.css"
+import { RoutineContext } from "./RoutineProvider"
+import "./Routine.css"
 
 import { useParams } from "react-router-dom"
 
 
-export const WorkoutDetail = () => {
+export const RoutineDetail = () => {
     const { getRoutineById } = useContext(RoutineContext)
-    const [routines, setRoutine] = useState({})
+    const [routine, setRoutine] = useState({})
       
     const {routineId} = useParams();
       // include useParams from react-router-dom to allow the app to read a parameter from the URL
@@ -16,17 +16,17 @@ export const WorkoutDetail = () => {
   
     useEffect(() => {
       console.log("useEffect", routineId)
-      getRoutinetById(routineId)
+      getRoutineById(routineId)
       .then((response) => {
         setRoutine(response)
       })
       }, [])
   
     return (
-      <div className="workoutRoutine">
-        <h3 className="workout__name">Name: {workouts.name}</h3> 
-        <div className="workout__type">Type: {workouts.type}</div>
-        <div className="workout__name">Workouts: {workouts.routine?.name}</div> 
+      <div className="routine">
+        <h3 className="routine__name">Name: {routine.name}</h3> 
+        <div className="routine__type">Type: {routine.routine?.type}</div>
+        <div className="routine__name">routine: {routine.routine?.name}</div> 
       </div>
     )
   }

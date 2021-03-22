@@ -1,7 +1,7 @@
 import React, { useEffect, useContext, useState } from "react"
 import { WorkoutCard } from "./WorkoutCard"
 import "./Workout.css"
-
+import Button from 'react-bootstrap/Button'
 
 
 // The useContext hook, @ line 12, allows you to use data structures and functions that a parent provider, for instance the WorkoutProvider @ line 38, component exposes.
@@ -36,10 +36,13 @@ export const WorkoutList = () => {
           Create Workout
         </button>
         </div>
+        <>
+          
+        </>
         <div className="workouts">
           <div className="typeBtn">
-          <button onClick={() => setFilteredWorkouts(workouts.filter(workout=> workout.type === "Upper"))}>Upper</button>
-          <button onClick={() => setFilteredWorkouts(workouts.filter(workout=> workout.type === "Lower"))}>Lower</button>
+          <Button size="sm" onClick={() => setFilteredWorkouts(workouts.filter(workout=> workout.type === "Upper"))}>Upper</Button>
+          <Button onClick={() => setFilteredWorkouts(workouts.filter(workout=> workout.type === "Lower"))}>Lower</Button>
           </div>
           
         {

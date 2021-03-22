@@ -5,13 +5,21 @@ import { useParams, useHistory } from "react-router-dom"
 
 
 export const WorkoutDetail = () => {
-    const { getWorkoutById } = useContext(WorkoutContext)
-    const [workouts, setWorkout] = useState({})
+    const { getWorkoutById,releaseWorkout } = useContext(WorkoutContext)
+    const [workout, setWorkout] = useState({})
+    
       
     const {workoutId} = useParams();
       // include useParams from react-router-dom to allow the app to read a parameter from the URL
       const history = useHistory();
   
+    const handleRelease = () => {
+      console.log(workout.id)
+        releaseWorkout(workout.id)
+        .then(() => {
+        history.push("/workouts")
+      })
+    }
   
     useEffect(() => {
       console.log("useEffect", workoutId)
@@ -23,13 +31,14 @@ export const WorkoutDetail = () => {
   
     return (
       <div className="workoutRoutine">
-        {console.log(workouts)}
-        <h3 className="workout__name">Name: {workouts.name}</h3> 
-        <div className="workout__type">Type: {workouts.type}</div>
-        <div className="workout__reps">Reps: {workouts.reps}</div>
-        <div className="workout__sets">Sets: {workouts.sets}</div>
+        {console.log(workout)}
+        <h3 className="workout__name">Name: {workout.name}</h3> 
+        <div className="workout__type">Type: {workout.type}</div>
+        <div className="workout__reps">Reps: {workout.reps}</div>
+        <div className="workout__sets">Sets: {workout.sets}</div>
+        <button onClick={handleRelease}>Release Workout</button>
         <button onClick={() => {
-          history.push(`/workouts/edit/${workouts.id}`)
+          history.push(`/workouts/edit/${workout.id}`)
             }}>Edit</button>
       </div>
     )

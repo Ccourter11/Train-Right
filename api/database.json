@@ -1,79 +1,56 @@
 {
   "workouts": [
     {
-      "name": "Push Ups",
-      "type": "Upper",
-      "reps": "10",
-      "sets": "3-5",
-      "id": 1
-    },
-    {
-      "name": "Pull Ups",
-      "type": "Upper",
-      "reps": "8-10",
-      "sets": "2-4",
-      "id": 2
-    },
-    {
-      "name": "Chin Ups",
-      "type": "Upper",
-      "reps": "8-10",
-      "sets": "2",
-      "id": 3
-    },
-    {
-      "name": "Philly special",
-      "type": "Lower",
-      "reps": "2",
-      "sets": "2",
-      "id": 4
-    },
-    {
-      "name": "Super Squat",
-      "type": "Lower",
-      "reps": "4",
-      "sets": "1",
-      "id": 5
-    },
-    {
       "name": "Trent lift",
       "type": "Lower",
       "reps": "2",
       "sets": "2",
       "id": 6
-    }
-  ],
-  "workoutRoutines": [
-    {
-      "workoutsId": 1,
-      "routinesId": 1,
-      "id": 1
     },
     {
-      "workoutsId": 2,
-      "routinesId": 1,
-      "id": 2
+      "name": "Sage",
+      "type": "lower",
+      "reps": "12222",
+      "sets": "122",
+      "id": 7
     },
     {
-      "workoutsId": 3,
-      "routinesId": 1,
-      "id": 3
+      "name": "Nicole squats",
+      "type": "Lower",
+      "reps": "8",
+      "sets": "12",
+      "id": 9
+    },
+    {
+      "name": "Noobie boobie",
+      "type": "Upper",
+      "reps": "12",
+      "sets": "12",
+      "id": 10
+    },
+    {
+      "name": "Sumo Squat",
+      "type": "Lower",
+      "reps": "12",
+      "sets": "12",
+      "id": 11
+    },
+    {
+      "name": "Deep Squat",
+      "type": "Lower",
+      "reps": "12",
+      "sets": "12",
+      "id": 12
     }
   ],
+  "workoutRoutines": [],
   "routines": [
     {
       "id": 1,
       "userId": 1,
       "routineName": "Monday Session",
-      "date": "03/15/2021",
+      "date": "03/12/2021",
       "workoutId": 1
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "routineName": "Legs babyy",
-      "date": "03/18/2021",
-      "workoutId": 4
     }
   ],
   "users": [

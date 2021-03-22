@@ -2,15 +2,20 @@
   display: flex;
   justify-content: center;
 }
+.typeBtn {
+  display: grid;
+  
+  
+}
 .workouts__title {
   display: flex;
   justify-content: center;
 }
-.workouts {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+/* .workouts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  } */
 .workout {
     flex-basis: 28%;
     margin: 1em;

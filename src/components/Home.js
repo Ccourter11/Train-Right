@@ -8,6 +8,7 @@ export const Home = () => {
         {console.log("render jsx")}
         <div>
        <h1 className="home__title">Welcome To Train Right!</h1>
+       
        </div>
       </>
     )

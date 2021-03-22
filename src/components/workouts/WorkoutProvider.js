@@ -14,13 +14,13 @@ const getWorkouts = () => {
       .then(workoutsData => setWorkouts(workoutsData))
   }
 
-  const addWorkout = workoutObj => {
+  const addWorkout = workouts => {
     return fetch("http://localhost:8088/workouts", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(workoutObj)
+        body: JSON.stringify(workouts)
     })
     .then(getWorkouts)
   }
@@ -37,13 +37,13 @@ const getWorkouts = () => {
         .then(getWorkouts)
   }
 
-  const updateWorkout = workouts => {
-    return fetch(`http://localhost:8088/workouts/${workouts.id}`, {
+  const updateWorkout = workout => {
+    return fetch(`http://localhost:8088/workouts/${workout.id}`, {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(workouts)
+        body: JSON.stringify(workout)
     })
     .then(getWorkouts)
   }

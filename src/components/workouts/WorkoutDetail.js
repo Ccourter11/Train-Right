@@ -5,9 +5,8 @@ import { useParams, useHistory } from "react-router-dom"
 
 
 export const WorkoutDetail = () => {
-    const { getWorkoutById,releaseWorkout } = useContext(WorkoutContext)
+    const { getWorkoutById, releaseWorkout, updateWorkout } = useContext(WorkoutContext)
     const [workout, setWorkout] = useState({})
-    
       
     const {workoutId} = useParams();
       // include useParams from react-router-dom to allow the app to read a parameter from the URL

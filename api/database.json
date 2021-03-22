@@ -22,13 +22,6 @@
       "id": 9
     },
     {
-      "name": "Noobie boobie",
-      "type": "Upper",
-      "reps": "12",
-      "sets": "12",
-      "id": 10
-    },
-    {
       "name": "Sumo Squat",
       "type": "Lower",
       "reps": "12",
@@ -41,6 +34,27 @@
       "reps": "12",
       "sets": "12",
       "id": 12
+    },
+    {
+      "id": 13,
+      "name": "Push up",
+      "type": "Upper",
+      "reps": 12,
+      "sets": 20
+    },
+    {
+      "name": "Jump rope",
+      "type": "Lower",
+      "sets": "2",
+      "reps": "2",
+      "id": 14
+    },
+    {
+      "name": "",
+      "type": "Lower",
+      "sets": "22",
+      "reps": "12",
+      "id": 15
     }
   ],
   "workoutRoutines": [],
@@ -49,7 +63,7 @@
       "id": 1,
       "userId": 1,
       "routineName": "Monday Session",
-      "date": "03/12/2021",
+      "date": "03/15/2021",
       "workoutId": 1
     }
   ],

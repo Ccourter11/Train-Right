@@ -6,62 +6,78 @@ import "./Workout.css"
 
 
 export const WorkoutForm = () => {
-    const { addWorkout, updateWorkout, getWorkoutById } = useContext(WorkoutContext) 
-
-    const history = useHistory()
+    const { addWorkout,getWorkouts, updateWorkout, getWorkoutById } = useContext(WorkoutContext) 
+    const [ isLoading, setIsLoading ] = useState(true);
+    //Define the intial state of the form inputs with useState()
     const [workout, setWorkout] = useState({
-        "name": "",
-        "type": "",
-        "sets": "",
-        "reps": "",
+      "name": "",
+      "type": "",
+      "sets": 0,
+      "reps": 0
     })
-
+    
+    const history = useHistory()
     const {workoutId} = useParams();
 
-    useEffect(() => { 
+    // after a change, save it
+    const handleControlledInputChange = (event) => {
+      // When changing a state object or array, always create a copy, make changes, and then set state.
+      const newWorkout = {...workout}
+      //workout is an object with properties.
+      let selectedVal = event.target.value
+      
+      // Set the property to the new value using object bracket notation.
+      newWorkout[event.target.id] = selectedVal
+      // update state
+      setWorkout(newWorkout)
+    }
+    
+    // Add a conditional to make sure all fields are complete
+    const handleSaveWorkout = (event) => {
+      
+         if (workout.name === ""){
+        window.alert("You must create a name for this workout!")
+      } else {
+        addWorkout(workout)
+        .then(history.push("/workouts"))
+      }
       if (workoutId) {
-        getWorkoutById(parseInt(workoutId)) 
-        .then(workout=> {
+        updateWorkout(workout)
+        .then(history.push("/workouts"))
+    } else { 
+      //invoke addCustomer passing customer as an argument.
+       addWorkout(workout)
+      //change the url and display the customer list
+      .then(history.push("/workouts"))
+      }
+  }
+
+    useEffect(() => {
+      getWorkouts().then(() => {
+
+          // if there is data
+      if (workoutId) {
+          getWorkoutById(workoutId)
+          .then(workout=> {
           const editedWorkout = {
             id: workout.id,
             name: workout.name,
-            reps: workout.reps,
-            sets: workout.sets,
-            type: workout.type
+            type: workout.type,
+            reps: parseInt(workout.reps),
+            sets: parseInt(workout.sets)
           }
           setWorkout(editedWorkout)
-        })
+              setIsLoading(false)
+          })
+      } else {
+          // else there is no data
+          setIsLoading(false)
       }
-    }, [])
-
-    // Add a conditional to make sure all fields are complete
-    const handleControlledInputChange = (event) => {
-        const newWorkout = {...workout}
-    
-        let setValue = event.target.value
-    
-        if (event.target.id.includes("Id")){
-          setValue = parseInt(setValue)
-        }
-         else {
-          newWorkout[event.target.id] = setValue
-        }
-    
-        setWorkout(newWorkout)
-      }
-    
-      const handleSaveWorkout = (event) => {
-        event.preventDefault()
-    
-        if (workout.name === ""){
-          window.alert("You must create a name for this workout!")
-        } else {
-          addWorkout(workout)
-          .then(history.push("/workouts"))
-        }
-      }
+      })
+  }, [])
 
     return (
+      
         <form className="workoutForm">
           <h2 className="workoutForm__title">Workout Form</h2>
           <fieldset className="form-group">

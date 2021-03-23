@@ -9,7 +9,7 @@ export const RoutineCard = (props) => (
       <Link to={`/routines/detail/${props.routine.id}`}>
         {props.routine.routineName}
       </Link>
-      <h3 className="routine__date">Routine Date: {props.routine.date}</h3>
+      <h3 className="routine__date">{props.routine.date}</h3>
       <h3></h3>
     </div>
   )

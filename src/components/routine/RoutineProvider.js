@@ -11,7 +11,7 @@ export const RoutineProvider = (props) => {
         .then(setRoutines)
     }
     const getRoutineById = (id) => {
-        return fetch(`http://localhost:8088/routines/${id}?_expand=workout`)
+        return fetch(`http://localhost:8088/routines/${id}?_embed=workoutRoutines`)
             .then(res => res.json())
       }
 

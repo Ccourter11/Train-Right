@@ -48,16 +48,38 @@
       "type": "Lower",
       "reps": 2,
       "sets": 2
+    },
+    {
+      "name": "Chin Ups",
+      "type": "Upper",
+      "sets": "3",
+      "reps": "16",
+      "id": 8
     }
   ],
-  "workoutRoutines": [],
+  "workoutRoutines": [
+    {
+      "routineId": 1,
+      "workoutId": 1,
+      "id": 1
+    },
+    {
+      "routineId": 1,
+      "workoutId": 2,
+      "id": 2
+    }
+  ],
   "routines": [
     {
       "id": 1,
       "userId": 1,
       "routineName": "Monday Session",
-      "date": "03/15/2021",
-      "workoutId": 1
+      "date": "03-15-2021"
+    },
+    {
+      "routineName": "Kill Bill",
+      "date": "2021-03-23",
+      "id": 2
     }
   ],
   "users": [

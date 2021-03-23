@@ -62,7 +62,7 @@ return (
       <fieldset>
           <div className="form-group">
               <label htmlFor="name">Routine Name: </label>
-              <input type="text" id="name" onChange={handleControlledInputChange} className="form-control" placeholder="Routine name" value={routine.routineName}/>
+              <input type="text" id="routineName" onChange={handleControlledInputChange} className="form-control" placeholder="Routine name" value={routine.routineName}/>
           </div>
       </fieldset>
       <fieldset>

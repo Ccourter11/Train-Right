@@ -23,19 +23,27 @@ export const RoutineDetail = () => {
       })
       }, [])
 
-      {
-        let promises =  routines.workoutRoutines.map(workoutRoutine => getWorkoutById(workoutRoutine.workoutId))
-        Promise.all(promises).then(setWorkouts)
-      }
-  
+
+      useEffect(() => {
+        let promises = []
+        promises =  routines.workoutRoutines?.map(workoutRoutine => getWorkoutById(workoutRoutine.workoutId))
+        promises ? Promise.all(promises).then(SetWorkouts) : console.log("No Promises")
+      }, [routines])
+     
     return (
       <div className="routineDetail">
         <h1>Details</h1>
-        {console.log(routines)}
-        <h3 className="routineDetail__name">Name: {routines.workout?.name}</h3> 
-        <h3 className="routineDetail__type">Type: {routines.workout?.type}</h3>
-        <h3 className="routineDetail__reps">Reps: {routines.workout?.reps}</h3>
-        <h3 className="routineDetail__sets">Sets: {routines.workout?.sets}</h3>
+        {console.log(workouts)}
+        {
+          workouts.map(workout => <div key={workout.id}>
+          <h3 className="routineDetail__name" key={workout.name}>Name: {workout?.name}</h3> 
+          <h3 className="routineDetail__type" key={workout.type}>Type: {workout?.type}</h3>
+          <h3 className="routineDetail__reps" key={workout.reps}>Reps: {workout?.reps}</h3>
+          <h3 className="routineDetail__sets" key={workout.sets}>Sets: {workout?.sets}</h3> 
+          </div>
+          )
+        }
+       
       </div>
     )
   }

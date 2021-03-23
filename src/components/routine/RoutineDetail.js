@@ -28,7 +28,6 @@ export const RoutineDetail = () => {
         <h3 className="routineDetail__type">Type: {routines.workout?.type}</h3>
         <h3 className="routineDetail__reps">Reps: {routines.workout?.reps}</h3>
         <h3 className="routineDetail__sets">Sets: {routines.workout?.sets}</h3>
-       
       </div>
     )
   }

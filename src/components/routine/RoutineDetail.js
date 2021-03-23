@@ -2,12 +2,15 @@ import React, { useContext, useEffect, useState } from "react"
 import { RoutineContext } from "./RoutineProvider"
 import "./Routine.css"
 import { useParams, useHistory } from "react-router-dom"
+import { WorkoutContext } from "../workouts/WorkoutProvider"
 
 
 export const RoutineDetail = () => {
     const { getRoutineById } = useContext(RoutineContext)
     const [routines, setRoutine] = useState({})
     const {routineId} = useParams();
+    const {getWorkoutById} = useContext(WorkoutContext)
+    const [workouts, SetWorkouts] = useState([])
       // include useParams from react-router-dom to allow the app to read a parameter from the URL
       const history = useHistory();
   
@@ -19,6 +22,11 @@ export const RoutineDetail = () => {
         setRoutine(response)
       })
       }, [])
+
+      {
+        let promises =  routines.workoutRoutines.map(workoutRoutine => getWorkoutById(workoutRoutine.workoutId))
+        Promise.all(promises).then(setWorkouts)
+      }
   
     return (
       <div className="routineDetail">

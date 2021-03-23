@@ -1,6 +1,7 @@
 import React, { useState, createContext } from "react"
 
 export const WorkoutContext = createContext()
+// context is primarily used when some data needs to be accessible by many components at 
 
 // This component establishes what data can be used.
 export const WorkoutProvider = (props) => {

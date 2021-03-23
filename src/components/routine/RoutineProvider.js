@@ -11,13 +11,34 @@ export const RoutineProvider = (props) => {
         .then(setRoutines)
     }
     const getRoutineById = (id) => {
-        return fetch(`http://localhost:8088/routines/${id}`)
+        return fetch(`http://localhost:8088/routines/${id}?_expand=workout`)
             .then(res => res.json())
       }
 
+      const saveRoutine = routines => {
+        return fetch("http://localhost:8088/routines", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(routines)
+        })
+        .then(getRoutines)
+      }
+
+      const updateRoutine = routine => {
+        return fetch(`http://localhost:8088/routines/${routine.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(routine)
+        })
+        .then(getRoutines)
+      }
     return (
         <RoutineContext.Provider value={{
-            routines, getRoutines, getRoutineById
+            routines, getRoutines, getRoutineById, saveRoutine, updateRoutine
         }}>
             {props.children}
         </RoutineContext.Provider>

@@ -4,7 +4,7 @@
 }
 .typeBtn {
   display: grid;
-  
+  border-radius: 12px;
   
 }
 .workouts__title {

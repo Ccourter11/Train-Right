@@ -5,56 +5,49 @@
       "type": "Lower",
       "reps": "2",
       "sets": "2",
-      "id": 6
+      "id": 1
     },
     {
       "name": "Sage",
       "type": "lower",
       "reps": "12222",
       "sets": "122",
-      "id": 7
+      "id": 2
     },
     {
       "name": "Nicole squats",
       "type": "Lower",
       "reps": "8",
       "sets": "12",
-      "id": 9
+      "id": 3
     },
     {
       "name": "Sumo Squat",
       "type": "Lower",
       "reps": "12",
       "sets": "12",
-      "id": 11
+      "id": 4
     },
     {
       "name": "Deep Squat",
       "type": "Lower",
       "reps": "12",
       "sets": "12",
-      "id": 12
+      "id": 5
     },
     {
-      "id": 13,
+      "id": 6,
       "name": "Push up",
       "type": "Upper",
-      "reps": 12,
+      "reps": 123,
       "sets": 20
     },
     {
+      "id": 7,
       "name": "Jump rope",
       "type": "Lower",
-      "sets": "2",
-      "reps": "2",
-      "id": 14
-    },
-    {
-      "name": "",
-      "type": "Lower",
-      "sets": "22",
-      "reps": "12",
-      "id": 15
+      "reps": 2,
+      "sets": 2
     }
   ],
   "workoutRoutines": [],

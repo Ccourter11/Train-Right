@@ -8,6 +8,7 @@ import { RoutineProvider } from "./routine/RoutineProvider"
 import { RoutineList } from "./routine/RoutineList"
 import { WorkoutDetail } from "./workouts/WorkoutDetail"
 import { RoutineDetail } from "./routine/RoutineDetail"
+import { RoutineForm } from "./routine/RoutineForm"
 
 
 export const ApplicationViews = () => {
@@ -40,8 +41,12 @@ export const ApplicationViews = () => {
                    <RoutineList />
                 </Route>
 
-                <Route path="/routines/detail/routineId(\d+)">
+                <Route exact path="/routines/detail/:routineId(\d+)">
                    <RoutineDetail />
+                </Route>
+
+                <Route exact path="/routines/create">
+                  <RoutineForm />
                 </Route>
             </WorkoutProvider> 
         </RoutineProvider>

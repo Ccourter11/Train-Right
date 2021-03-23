@@ -5,6 +5,7 @@ import "./Workout.css"
 
 
 
+
 export const WorkoutForm = () => {
     const { addWorkout,getWorkouts, updateWorkout, getWorkoutById } = useContext(WorkoutContext) 
     const [ isLoading, setIsLoading ] = useState(true);
@@ -96,7 +97,7 @@ export const WorkoutForm = () => {
             <label htmlFor="reps">Sets: </label>
             <input type="number" id="sets" onChange={handleControlledInputChange} value={workout.sets} required></input>
           </fieldset>
-          <button className="btn" onClick={handleSaveWorkout}>
+          <button variant="primary" className="btn" onClick={handleSaveWorkout}>
             Save Workout
           </button>
         </form>

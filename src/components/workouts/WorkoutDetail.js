@@ -5,7 +5,7 @@ import { useParams, useHistory } from "react-router-dom"
 
 
 export const WorkoutDetail = () => {
-    const { getWorkoutById, releaseWorkout, updateWorkout } = useContext(WorkoutContext)
+    const { getWorkoutById, releaseWorkout } = useContext(WorkoutContext)
     const [workout, setWorkout] = useState({})
       
     const {workoutId} = useParams();
@@ -30,7 +30,6 @@ export const WorkoutDetail = () => {
   
     return (
       <div className="workoutRoutine">
-        {console.log(workout)}
         <h3 className="workout__name">Name: {workout.name}</h3> 
         <div className="workout__type">Type: {workout.type}</div>
         <div className="workout__reps">Reps: {workout.reps}</div>

@@ -39,7 +39,7 @@
       "id": 13,
       "name": "Push ups",
       "type": "Upper",
-      "reps": 12,
+      "reps": "123",
       "sets": 20
     },
     {

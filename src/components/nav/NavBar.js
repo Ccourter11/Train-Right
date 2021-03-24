@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import "./NavBar.css"
 
-export const NavBar = (props) => {
+export const NavBar = () => {
     return (
         <ul className="navbar">
             <li className="navbar__item active">

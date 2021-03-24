@@ -9,7 +9,7 @@
     },
     {
       "id": 2,
-      "name": "Sages Lift",
+      "name": "Sages Lift is too easyy",
       "type": "Lower",
       "reps": 12222,
       "sets": 122
@@ -32,7 +32,7 @@
       "id": 6,
       "name": "Push up",
       "type": "Upper",
-      "reps": 123,
+      "reps": "12",
       "sets": 20
     },
     {
@@ -41,6 +41,27 @@
       "sets": "3",
       "reps": "16",
       "id": 8
+    },
+    {
+      "name": "one arm push up",
+      "type": "Upper",
+      "sets": 0,
+      "reps": "",
+      "id": 9
+    },
+    {
+      "name": "one arm push up",
+      "type": "Upper",
+      "sets": 0,
+      "reps": "",
+      "id": 10
+    },
+    {
+      "name": "",
+      "type": "Upper",
+      "sets": "2",
+      "reps": "2",
+      "id": 11
     }
   ],
   "workoutRoutines": [

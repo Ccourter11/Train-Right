@@ -91,6 +91,11 @@
       "email": "katie@gmail.com",
       "name": "Katie Kline",
       "id": 2
+    },
+    {
+      "email": "trent@gmail.com",
+      "name": "Trent Phan",
+      "id": 3
     }
   ]
 }

@@ -40,6 +40,7 @@ export const RoutineDetail = () => {
           <h3 className="routineDetail__type" key={workout.type}>Type: {workout?.type}</h3>
           <h3 className="routineDetail__reps" key={workout.reps}>Reps: {workout?.reps}</h3>
           <h3 className="routineDetail__sets" key={workout.sets}>Sets: {workout?.sets}</h3> 
+          <hr/>
           </div>
           )
         }

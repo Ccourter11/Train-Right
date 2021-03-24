@@ -1,13 +1,11 @@
 import React, { useEffect, useContext, useState } from "react"
 import { WorkoutCard } from "./WorkoutCard"
 import "./Workout.css"
-import Button from "react-bootstrap/Button"
 
 
 // The useContext hook, @ line 12, allows you to use data structures and functions that a parent provider, for instance the WorkoutProvider @ line 38, component exposes.
 // To start, you need to import the context object you created in the provider component so that the Context hook can access the objects it exposes
 import { WorkoutContext } from "./WorkoutProvider"
-
 import { useHistory } from "react-router-dom" // import from libraries before your local modules
 
 export const WorkoutList = () => {
@@ -32,19 +30,16 @@ export const WorkoutList = () => {
         <>  
         <h2 className="workouts__title">Workouts</h2>
         <div className="createBtn">
-        <Button variant="primary" onClick={() => history.push("/workouts/create")}>
+        <button onClick={() => history.push("/workouts/create")}>
           Create Workout
-        </Button>
+        </button>
         </div>
        
-       
-        
-          
-        
+
         <div className="workouts">
           <div className="typeBtn">
-          <Button size="sm" onClick={() => setFilteredWorkouts(workouts.filter(workout=> workout.type === "Upper"))}>Upper</Button>
-          <Button onClick={() => setFilteredWorkouts(workouts.filter(workout=> workout.type === "Lower"))}>Lower</Button>
+          <button onClick={() => setFilteredWorkouts(workouts.filter(workout=> workout.type === "Upper"))}>Upper</button>
+          <button onClick={() => setFilteredWorkouts(workouts.filter(workout=> workout.type === "Lower"))}>Lower</button>
           </div>
           
         {

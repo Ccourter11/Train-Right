@@ -1,25 +1,18 @@
 {
   "workouts": [
     {
-      "name": "Trent lift",
+      "id": 1,
+      "name": "Trent lifted",
       "type": "Lower",
-      "reps": "2",
-      "sets": "2",
-      "id": 1
+      "reps": 2,
+      "sets": 2
     },
     {
-      "name": "Sage",
-      "type": "lower",
-      "reps": "12222",
-      "sets": "122",
-      "id": 2
-    },
-    {
-      "name": "Nicole squats",
+      "id": 2,
+      "name": "Sages Lift",
       "type": "Lower",
-      "reps": "8",
-      "sets": "12",
-      "id": 3
+      "reps": 12222,
+      "sets": 122
     },
     {
       "name": "Sumo Squat",
@@ -43,13 +36,6 @@
       "sets": 20
     },
     {
-      "id": 7,
-      "name": "Jump rope",
-      "type": "Lower",
-      "reps": 2,
-      "sets": 2
-    },
-    {
       "name": "Chin Ups",
       "type": "Upper",
       "sets": "3",
@@ -58,11 +44,6 @@
     }
   ],
   "workoutRoutines": [
-    {
-      "routineId": 1,
-      "workoutId": 1,
-      "id": 1
-    },
     {
       "routineId": 1,
       "workoutId": 2,
@@ -75,22 +56,23 @@
       "userId": 1,
       "routineName": "Monday Session",
       "date": "03-15-2021"
-    },
-    {
-      "routineName": "Kill Bill",
-      "date": "2021-03-23",
-      "id": 2
     }
   ],
   "users": [
     {
       "id": 1,
+      "name": "calvin",
       "email": "courter@yahoo.com"
     },
     {
       "email": "katie@gmail.com",
       "name": "Katie Kline",
       "id": 2
+    },
+    {
+      "email": "trent@gmail.com",
+      "name": "Trent Phan",
+      "id": 3
     }
   ]
 }

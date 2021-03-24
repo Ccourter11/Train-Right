@@ -48,6 +48,10 @@ export const ApplicationViews = () => {
                 <Route exact path="/routines/create">
                   <RoutineForm />
                 </Route>
+
+                <Route path="/routines/workouts/edit/:workoutId(\d+)">
+                    <WorkoutForm/>
+                </Route>
             </WorkoutProvider> 
         </RoutineProvider>
         

@@ -3,6 +3,7 @@ import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import { userStorageKey } from "./auth/authSettings"
 import { Train } from "./Train";
+import { Logout } from "./auth/LogOut"
 
 function App() { 
 
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route path="/register">
           <Register />
+        </Route>
+        <Route path="/logout">
+          <Logout />
         </Route>
     </>
      

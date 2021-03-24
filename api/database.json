@@ -9,7 +9,7 @@
     },
     {
       "id": 2,
-      "name": "Sages Lift",
+      "name": "Sages Lift is too easyy",
       "type": "Lower",
       "reps": 12222,
       "sets": 122
@@ -19,7 +19,7 @@
       "type": "Lower",
       "reps": "12",
       "sets": "12",
-      "id": 4
+      "id": 3
     },
     {
       "name": "Deep Squat",
@@ -32,7 +32,7 @@
       "id": 6,
       "name": "Push up",
       "type": "Upper",
-      "reps": 123,
+      "reps": "12",
       "sets": 20
     },
     {
@@ -45,9 +45,19 @@
   ],
   "workoutRoutines": [
     {
-      "routineId": 1,
+      "routineId": 3,
       "workoutId": 2,
-      "id": 2
+      "id": 1
+    },
+    {
+      "routineId": 4,
+      "workoutId": 2,
+      "id": 1
+    },
+    {
+      "routineId": 3,
+      "workoutId": 3,
+      "id": 1
     }
   ],
   "routines": [
@@ -56,6 +66,24 @@
       "userId": 1,
       "routineName": "Monday Session",
       "date": "03-15-2021"
+    },
+    {
+      "routineName": "Scream violently at surroundings ",
+      "date": "2021-03-24",
+      "userId": 4,
+      "id": 2
+    },
+    {
+      "routineName": "Nicoles hardest day",
+      "date": "2021-03-24",
+      "userId": 5,
+      "id": 3
+    },
+    {
+      "routineName": "Nicoles easiest",
+      "date": "2021-03-25",
+      "userId": 5,
+      "id": 4
     }
   ],
   "users": [
@@ -73,6 +101,16 @@
       "email": "trent@gmail.com",
       "name": "Trent Phan",
       "id": 3
+    },
+    {
+      "email": "tsizzle@gmail.com",
+      "name": "Tsizzle Sizzle sazzle",
+      "id": 4
+    },
+    {
+      "email": "minaj@gmail.com",
+      "name": "Nikki colle nicoles",
+      "id": 5
     }
   ]
 }

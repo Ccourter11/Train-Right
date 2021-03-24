@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 import "./NavBar.css"
 
-export const NavBar = (props) => {
+export const NavBar = () => {
     return (
         <ul className="navbar">
             <li className="navbar__item active">
@@ -15,8 +15,10 @@ export const NavBar = (props) => {
                 <Link className="navbar__link" to="/routines">Routines</Link>
             </li>
             <li className="navbar__item">
-                <Link className="navbar__link" to="/routines">Log Out</Link>
+                <Link className="navbar__link" to="/logout">Log Out</Link>
             </li>
+            
+              
         </ul>
     )
 }

@@ -9,7 +9,7 @@
     },
     {
       "id": 2,
-      "name": "Sages Lift is too easyy",
+      "name": "Sages Lift is too simple",
       "type": "Lower",
       "reps": 12222,
       "sets": 122
@@ -32,7 +32,7 @@
       "id": 6,
       "name": "Push up",
       "type": "Upper",
-      "reps": "12",
+      "reps": 12,
       "sets": 20
     },
     {
@@ -52,12 +52,17 @@
     {
       "routineId": 4,
       "workoutId": 2,
-      "id": 1
+      "id": 2
     },
     {
       "routineId": 3,
       "workoutId": 3,
-      "id": 1
+      "id": 3
+    },
+    {
+      "routineId": 4,
+      "workoutId": 6,
+      "id": 4
     }
   ],
   "routines": [

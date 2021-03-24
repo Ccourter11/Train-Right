@@ -2,10 +2,14 @@ import React, { useContext, useEffect } from "react"
 import { RoutineContext } from "./RoutineProvider"
 import { RoutineCard } from "./RoutineCard"
 import { useHistory } from "react-router"
+import { userStorageKey } from "../auth/authSettings"
 
 
 export const RoutineList = () => {
   const {routines, getRoutines} = useContext(RoutineContext)
+  let currentUser = parseInt(sessionStorage.getItem(userStorageKey))
+  let userRoutines = routines.filter(routine => currentUser === routine.userId)
+  
 
   useEffect(() => {
     getRoutines()
@@ -22,7 +26,7 @@ export const RoutineList = () => {
         </div>
     <div className="routines">
       {
-      routines.map(routine => {
+      userRoutines.map(routine => {
         return <RoutineCard key={routine.id} routine={routine} />
       })
       }

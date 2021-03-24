@@ -2,15 +2,16 @@ import React, { useContext, useEffect, useState } from "react"
 import { useHistory, useParams } from "react-router-dom"
 import { RoutineContext } from "./RoutineProvider"
 import "./Routine.css"
-
+import { userStorageKey } from "../auth/authSettings"
 
 export const RoutineForm = () => {
   const {saveRoutine, updateRoutine, getRoutineById} = useContext(RoutineContext)
-
+  let currentUser = parseInt(sessionStorage.getItem(userStorageKey))
 
   const [routine, setRoutine] = useState({
     routineName: "",
-    date: 0
+    date: 0,
+    userId: currentUser
   })
 
   const history = useHistory()
@@ -38,7 +39,8 @@ export const RoutineForm = () => {
     }else{
       saveRoutine({
         routineName: routine.routineName,
-        date: routine.date
+        date: routine.date,
+        userId: currentUser
       })
       .then(() => history.push("/routines"))
     }

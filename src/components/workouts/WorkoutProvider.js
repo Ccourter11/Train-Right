@@ -48,6 +48,20 @@ const getWorkouts = () => {
     })
     .then(getWorkouts)
   }
+  const AddedWorkout = workoutsRoutine => {
+    return fetch("http://localhost:8088/workoutRoutines", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(workoutsRoutine)
+    })
+    .then(getWorkoutRoutine)
+  }
+  const getWorkoutRoutine = () => {
+    return fetch("http://localhost:8088/workoutRoutines")
+      .then(response => response.json())
+  }
 
    /*
       You return a context provider which has the
@@ -57,7 +71,7 @@ const getWorkouts = () => {
       return (
         <WorkoutContext.Provider value={{
           
-          workouts, getWorkouts, addWorkout, getWorkoutById, updateWorkout, releaseWorkout
+          workouts, getWorkouts, addWorkout, getWorkoutById, updateWorkout, releaseWorkout, AddedWorkout, getWorkoutRoutine
         }}>
           {props.children}
         </WorkoutContext.Provider>

@@ -5,10 +5,14 @@ export const RoutineContext = createContext()
 export const RoutineProvider = (props) => {
     const [routines, setRoutines] = useState([])
 
+
+    // getting the array or routines from db
     const getRoutines = () => {
         return fetch("http://localhost:8088/routines")
         .then(response => response.json())
+        // from json to JS^
         .then(setRoutines)
+        // sets response to the state var [routines]
     }
     const getRoutineById = (id) => {
         return fetch(`http://localhost:8088/routines/${id}?_embed=workoutRoutines`)

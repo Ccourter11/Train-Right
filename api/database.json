@@ -26,10 +26,10 @@
       "type": "Lower",
       "reps": "12",
       "sets": "12",
-      "id": 5
+      "id": 4
     },
     {
-      "id": 6,
+      "id": 5,
       "name": "Push up",
       "type": "Upper",
       "reps": 12,
@@ -40,29 +40,19 @@
       "type": "Upper",
       "sets": "3",
       "reps": "16",
-      "id": 8
+      "id": 6
     }
   ],
   "workoutRoutines": [
     {
-      "routineId": 3,
-      "workoutId": 2,
+      "routineId": 1,
+      "workoutId": 6,
       "id": 1
     },
     {
-      "routineId": 4,
-      "workoutId": 2,
+      "routineId": 1,
+      "workoutId": 5,
       "id": 2
-    },
-    {
-      "routineId": 3,
-      "workoutId": 3,
-      "id": 3
-    },
-    {
-      "routineId": 4,
-      "workoutId": 6,
-      "id": 4
     }
   ],
   "routines": [
@@ -71,24 +61,6 @@
       "userId": 1,
       "routineName": "Monday Session",
       "date": "03-15-2021"
-    },
-    {
-      "routineName": "Scream violently at surroundings ",
-      "date": "2021-03-24",
-      "userId": 4,
-      "id": 2
-    },
-    {
-      "routineName": "Nicoles hardest day",
-      "date": "2021-03-24",
-      "userId": 5,
-      "id": 3
-    },
-    {
-      "routineName": "Nicoles easiest",
-      "date": "2021-03-25",
-      "userId": 5,
-      "id": 4
     }
   ],
   "users": [
@@ -116,6 +88,11 @@
       "email": "minaj@gmail.com",
       "name": "Nikki colle nicoles",
       "id": 5
+    },
+    {
+      "email": "jw@gmail.com",
+      "name": "Jon Wayne",
+      "id": 6
     }
   ]
 }

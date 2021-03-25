@@ -78,7 +78,7 @@ return (
         onClick={event =>{
           event.preventDefault()
           handleClickSaveRoutine()}}>
-        {routineId ? "Edit Routine" : "Save Routine"}
+        {"Save Routine"}
       </button>
   </form>
 )

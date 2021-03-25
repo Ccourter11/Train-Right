@@ -4,8 +4,11 @@
 }
 .typeBtn {
   display: grid;
-  border-radius: 12px;
-  
+  border-radius: 12px; 
+}
+.searchBtn {
+  display: grid;
+  justify-content: center;
 }
 .workouts__title {
   display: flex;

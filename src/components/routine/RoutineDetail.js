@@ -18,16 +18,14 @@ export const RoutineDetail = () => {
   
 
       const handleDelete = (event) => {
-        console.log(routineId)
-        {console.log(event.target)}
-        releaseRoutineWorkout(parseInt(event.target.id))
+          releaseRoutineWorkout(parseInt(event.target.id))
           .then(() => {
           history.push("/routines")
         })
       }
 
       const deletedRoutine = () => {
-        console.log(routineId)
+        
         deleteRoutine(routineId)
           .then(() => {
           history.push("/routines")
@@ -35,7 +33,7 @@ export const RoutineDetail = () => {
       }
   
     useEffect(() => {
-      console.log("useEffect", routineId)
+      
       getRoutineById(parseInt(routineId))
       .then((response) => {
         setRoutine(response)
@@ -52,8 +50,7 @@ export const RoutineDetail = () => {
     return (
       <div className="routineDetail">
         <h1>Details</h1>
-        {console.log(workouts)}
-        {/* {console.log(workout)} */}
+        
         {
           workouts.map(workout => <div key={workout.id}>
           <h3 className="routineDetail__name" id={workout.name}>Name: {workout?.name}</h3> 

@@ -33,7 +33,7 @@
     width: 60%;
     align-items: center;
     margin-left: 20%;
-    background-color: #b0e2ff;
+    /* background-color: #a4dcfc; */
   }
 .workoutRoutine {
       flex-basis: 28%;
@@ -41,11 +41,6 @@
       padding: 1em;
       border: 1px solid rgb(23, 22, 19);
   }
-.workout__name {
-  text-align: center;
-}
-.routineAssign {
-  text-align: center;
-}
+
  
  

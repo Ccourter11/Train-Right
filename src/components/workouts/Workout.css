@@ -1,14 +1,17 @@
 .createBtn {
   display: flex;
   justify-content: center;
-}
+ }
 .typeBtn {
   display: grid;
-  border-radius: 12px; 
 }
-.searchBtn {
+.searchBtn  {
   display: grid;
   justify-content: center;
+}
+.addBtn,.deleteWorkoutBtn, .editWorkoutBtn  {
+  background-color: rgba(149, 149, 150, 0.722);
+  border-radius: 12px;
 }
 .workouts__title {
   display: flex;
@@ -31,6 +34,6 @@
       padding: 1em;
       border: 1px solid rgb(23, 22, 19);
   }
-
+  
  
  

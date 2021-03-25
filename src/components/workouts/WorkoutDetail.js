@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react"
 import { WorkoutContext } from "./WorkoutProvider"
-import "./Workout.css"
 import { useParams, useHistory } from "react-router-dom"
-
+import Button from 'react-bootstrap/Button';
+import "./Workout.css"
 
 export const WorkoutDetail = () => {
     const { getWorkoutById, releaseWorkout } = useContext(WorkoutContext)
@@ -32,8 +32,8 @@ export const WorkoutDetail = () => {
         <div className="workout__type">Type: {workout.type}</div>
         <div className="workout__reps">Reps: {workout.reps}</div>
         <div className="workout__sets">Sets: {workout.sets}</div>
-        <button onClick={handleRelease}>Release Workout</button>
-        <button onClick={() => {
+        <Button className="deleteWorkoutBtn" onClick={handleRelease}>Release Workout</Button>
+        <button className="editWorkoutBtn" onClick={() => {
           history.push(`/workouts/edit/${workout.id}`)
             }}>Edit</button>
       </div>

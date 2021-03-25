@@ -13,7 +13,7 @@ const [searchTerms, setSearchTerms ] = useState("")
 const getWorkouts = () => {
     return fetch("http://localhost:8088/workouts")
       .then(response => response.json())
-      .then(workoutsData => setWorkouts(workoutsData))
+      .then(workouts => setWorkouts(workouts))
   }
 
   const addWorkout = workouts => {

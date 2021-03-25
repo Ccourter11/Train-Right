@@ -33,7 +33,7 @@ export const WorkoutList = () => {
         useEffect(() => {
           if (searchTerms !== "") {
             // If the search field is not blank, display matching workouts
-            const subset = workouts.filter(animal => animal.name.toLowerCase().includes(searchTerms.toLowerCase()))
+            const subset = workouts.filter(workout => workout.name.toLowerCase().includes(searchTerms.toLowerCase()))
             setFilteredWorkouts(subset)
           } else {
             // If the search field is blank, display all workouts

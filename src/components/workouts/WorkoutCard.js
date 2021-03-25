@@ -29,10 +29,10 @@ export const WorkoutCard = (props) => {
     //Controlled component
     const handleControlledInputChange = (event) => {
       //When changing a state object or array,
-      {console.log("handleControlledInputChange")}
+     
       //always create a copy make changes, and then set state.
       const newRoutine = { ...routine }
-      //animal is an object with properties.
+      //routine is an object with properties.
       //set the property to the new value
       newRoutine[event.target.id] = parseInt(event.target.value)
       //update state

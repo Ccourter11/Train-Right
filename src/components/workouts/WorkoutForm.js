@@ -87,7 +87,7 @@ export const WorkoutForm = () => {
           </fieldset>
           <fieldset className="form-group">
             <label htmlFor="reps">Type: </label>
-            <input type="text" id="type" onChange={handleControlledInputChange} value={workout.type} required></input>
+            <input type="dropdown" id="type" onChange={handleControlledInputChange} value={workout.type} required placeholder="Upper or Lower.."></input>
           </fieldset>
           <fieldset className="form-group">
             <label htmlFor="reps">Reps: </label>

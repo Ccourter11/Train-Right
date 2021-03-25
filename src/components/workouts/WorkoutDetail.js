@@ -13,7 +13,6 @@ export const WorkoutDetail = () => {
       const history = useHistory();
   
     const handleRelease = () => {
-      console.log(workout.id)
         releaseWorkout(workout.id)
         .then(() => {
         history.push("/workouts")
@@ -21,7 +20,6 @@ export const WorkoutDetail = () => {
     }
   
     useEffect(() => {
-      console.log("useEffect", workoutId)
       getWorkoutById(parseInt(workoutId))
       .then((response) => {
         setWorkout(response)

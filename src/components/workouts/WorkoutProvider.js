@@ -8,6 +8,7 @@ export const WorkoutProvider = (props) => {
 
 // Next, you will use the useState() hook to define a variable that holds the state of the component, and a function that updates it
 const [workouts, setWorkouts] = useState([])
+const [searchTerms, setSearchTerms ] = useState("")
 
 const getWorkouts = () => {
     return fetch("http://localhost:8088/workouts")
@@ -71,7 +72,7 @@ const getWorkouts = () => {
       return (
         <WorkoutContext.Provider value={{
           
-          workouts, getWorkouts, addWorkout, getWorkoutById, updateWorkout, releaseWorkout, AddedWorkout, getWorkoutRoutine
+          workouts, getWorkouts, addWorkout, getWorkoutById, updateWorkout, releaseWorkout, AddedWorkout, getWorkoutRoutine, searchTerms, setSearchTerms
         }}>
           {props.children}
         </WorkoutContext.Provider>

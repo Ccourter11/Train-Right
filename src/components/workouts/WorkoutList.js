@@ -10,8 +10,9 @@ import { useHistory } from "react-router-dom" // import from libraries before yo
 
 export const WorkoutList = () => {
     // This state changes when `getWorkouts()` is invoked below
-    const { workouts, getWorkouts } = useContext(WorkoutContext)
+    const { workouts, getWorkouts, searchTerms } = useContext(WorkoutContext)
     const [filteredWorkouts, setFilteredWorkouts] = useState([])
+    
 
 
     const history = useHistory()
@@ -25,6 +26,20 @@ export const WorkoutList = () => {
       //  Within a React component, useEffect is a function. 
       // After the return, useEffect is automatically invoked and since the dependency array is empty, it only runs the first time the component renders.
       // You can include dependencies in the array to cause the useEffect to run additional times.
+
+       // useEffect dependency array with dependencies - will run if dependency changes (state)
+
+        // searchTerms will cause a change
+        useEffect(() => {
+          if (searchTerms !== "") {
+            // If the search field is not blank, display matching workouts
+            const subset = workouts.filter(animal => animal.name.toLowerCase().includes(searchTerms.toLowerCase()))
+            setFilteredWorkouts(subset)
+          } else {
+            // If the search field is blank, display all workouts
+            setFilteredWorkouts(workouts)
+          }
+        }, [searchTerms, workouts])
 
       return (
         <>  

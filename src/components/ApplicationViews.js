@@ -9,6 +9,7 @@ import { RoutineList } from "./routine/RoutineList"
 import { WorkoutDetail } from "./workouts/WorkoutDetail"
 import { RoutineDetail } from "./routine/RoutineDetail"
 import { RoutineForm } from "./routine/RoutineForm"
+import { WorkoutSearch } from "./workouts/WorkoutSearch"
 
 
 export const ApplicationViews = () => {
@@ -22,6 +23,7 @@ export const ApplicationViews = () => {
         <RoutineProvider >
             <WorkoutProvider>
                <Route path="/workouts">
+               <WorkoutSearch />
                  <WorkoutList />
                </Route>
 

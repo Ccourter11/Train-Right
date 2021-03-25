@@ -26,10 +26,10 @@
       "type": "Lower",
       "reps": "12",
       "sets": "12",
-      "id": 5
+      "id": 4
     },
     {
-      "id": 6,
+      "id": 5,
       "name": "Push up",
       "type": "Upper",
       "reps": 12,
@@ -40,44 +40,34 @@
       "type": "Upper",
       "sets": "3",
       "reps": "16",
-      "id": 8
+      "id": 6
     }
   ],
   "workoutRoutines": [
     {
-      "routineId": 3,
-      "workoutId": 1,
+      "routineId": 1,
+      "workoutId": 6,
       "id": 1
     },
     {
-      "routineId": 4,
-      "workoutId": 2,
+      "routineId": 1,
+      "workoutId": 5,
       "id": 2
     },
     {
-      "routineId": 3,
+      "routineId": 2,
       "workoutId": 3,
       "id": 3
     },
     {
-      "routineId": 4,
-      "workoutId": 6,
+      "routineId": 0,
+      "workoutId": 4,
       "id": 4
     },
     {
-      "routineId": 0,
-      "workoutId": 6,
+      "routineId": 3,
+      "workoutId": 4,
       "id": 5
-    },
-    {
-      "routineId": 1,
-      "workoutId": 6,
-      "id": 6
-    },
-    {
-      "routineId": 1,
-      "workoutId": 8,
-      "id": 7
     }
   ],
   "routines": [
@@ -86,6 +76,24 @@
       "userId": 1,
       "routineName": "Monday Session",
       "date": "03-15-2021"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "routineName": "Tuesday Session",
+      "date": "03-16-2021"
+    },
+    {
+      "routineName": "Thurs lift",
+      "date": 0,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "routineName": "Jonny",
+      "date": "2021-03-25",
+      "userId": 1,
+      "id": 4
     }
   ],
   "users": [
@@ -113,6 +121,11 @@
       "email": "minaj@gmail.com",
       "name": "Nikki colle nicoles",
       "id": 5
+    },
+    {
+      "email": "jw@gmail.com",
+      "name": "Jon Wayne",
+      "id": 6
     }
   ]
 }

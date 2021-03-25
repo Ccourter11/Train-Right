@@ -53,21 +53,6 @@
       "routineId": 1,
       "workoutId": 5,
       "id": 2
-    },
-    {
-      "routineId": 2,
-      "workoutId": 3,
-      "id": 3
-    },
-    {
-      "routineId": 0,
-      "workoutId": 4,
-      "id": 4
-    },
-    {
-      "routineId": 3,
-      "workoutId": 4,
-      "id": 5
     }
   ],
   "routines": [
@@ -76,24 +61,6 @@
       "userId": 1,
       "routineName": "Monday Session",
       "date": "03-15-2021"
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "routineName": "Tuesday Session",
-      "date": "03-16-2021"
-    },
-    {
-      "routineName": "Thurs lift",
-      "date": 0,
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "routineName": "Jonny",
-      "date": "2021-03-25",
-      "userId": 1,
-      "id": 4
     }
   ],
   "users": [

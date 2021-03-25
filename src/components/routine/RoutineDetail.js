@@ -7,7 +7,7 @@ import { WorkoutContext } from "../workouts/WorkoutProvider"
 
 
 export const RoutineDetail = () => {
-    const { getRoutineById, releaseRoutineWorkout } = useContext(RoutineContext)
+    const { getRoutineById, releaseRoutineWorkout, deleteRoutine } = useContext(RoutineContext)
     const [routines, setRoutine] = useState({})
     const {routineId} = useParams();
     const {getWorkoutById} = useContext(WorkoutContext)
@@ -26,13 +26,13 @@ export const RoutineDetail = () => {
         })
       }
 
-      // const handleRelease = () => {
-      //   console.log(workout.id)
-      //     releaseWorkout(workout.id)
-      //     .then(() => {
-      //     history.push("/workouts")
-      //   })
-      // }
+      const deletedRoutine = () => {
+        console.log(routineId)
+        deleteRoutine(routineId)
+          .then(() => {
+          history.push("/routines")
+        })
+      }
   
     useEffect(() => {
       console.log("useEffect", routineId)
@@ -60,6 +60,7 @@ export const RoutineDetail = () => {
           <h3 className="routineDetail__type" id={workout.type}>Type: {workout?.type}</h3>
           <h3 className="routineDetail__reps" id={workout.reps}>Reps: {workout?.reps}</h3>
           <h3 className="routineDetail__sets" id={workout.sets}>Sets: {workout?.sets}</h3> 
+          <button id={routines?.id} onClick={deletedRoutine}>Release Routine</button>
           <button id={workout?.id} onClick={handleDelete}>Release Workout</button>
           <button onClick={() => {
             history.push(`/routines/edit/${workout.id}`)

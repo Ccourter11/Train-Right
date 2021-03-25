@@ -47,9 +47,15 @@ export const RoutineProvider = (props) => {
         })
             .then(getRoutines)
       }
+      const deleteRoutine = routineId => {
+        return fetch(`http://localhost:8088/routines/${routineId}`, {
+            method: "DELETE"
+        })
+            .then(getRoutines)
+      }
     return (
         <RoutineContext.Provider value={{
-            routines, getRoutines, getRoutineById, saveRoutine, updateRoutine, releaseRoutineWorkout
+            routines, getRoutines, getRoutineById, saveRoutine, updateRoutine, releaseRoutineWorkout, deleteRoutine
         }}>
             {props.children}
         </RoutineContext.Provider>

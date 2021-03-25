@@ -7,11 +7,13 @@ export const WorkoutSearch = () => {
 
   return (
     <>
-      Workout search:
+    <div className="searchBtn">
+    <h2>Workout Search:</h2>
       <input type="text"
         className="input--wide"
         onKeyUp={(event) => setSearchTerms(event.target.value)}
         placeholder="Search for a workout... " />
+        </div>
     </>
   )
 } 

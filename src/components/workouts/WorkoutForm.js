@@ -46,9 +46,9 @@ export const WorkoutForm = () => {
         updateWorkout(workout)
         .then(history.push("/workouts"))
     } else { 
-      //invoke addCustomer passing customer as an argument.
+      //invoke addWorkout passing workout as an argument.
        addWorkout(workout)
-      //change the url and display the customer list
+      //change the url and display the workouts list
       .then(history.push("/workouts"))
       }
   }

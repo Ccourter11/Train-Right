@@ -12,6 +12,8 @@
 .addBtn,.deleteWorkoutBtn, .editWorkoutBtn  {
   background-color: rgba(149, 149, 150, 0.722);
   border-radius: 12px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  align-items: center;
 }
 .workouts__title {
   display: flex;
@@ -26,7 +28,12 @@
     flex-basis: 28%;
     margin: 1em;
     padding: 1em;
-    border: 1px solid rgb(23, 22, 19);
+    border: 1.5px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    width: 60%;
+    align-items: center;
+    margin-left: 20%;
+    background-color: #b0e2ff;
   }
 .workoutRoutine {
       flex-basis: 28%;
@@ -34,6 +41,11 @@
       padding: 1em;
       border: 1px solid rgb(23, 22, 19);
   }
-  
+.workout__name {
+  text-align: center;
+}
+.routineAssign {
+  text-align: center;
+}
  
  

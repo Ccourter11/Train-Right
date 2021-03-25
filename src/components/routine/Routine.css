@@ -9,4 +9,8 @@
       border: 1px solid rgb(23, 22, 19);
   }
 
-  
+ .deleteRoutineBtn,.deleteWorkoutBtn,.editRoutineBtn {
+    background-color: rgba(149, 149, 150, 0.722);
+    border-radius: 12px;
+ }
+

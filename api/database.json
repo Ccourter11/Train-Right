@@ -1,13 +1,6 @@
 {
   "workouts": [
     {
-      "id": 2,
-      "name": "Sages Lift is too simple",
-      "type": "Lower",
-      "reps": 12222,
-      "sets": 122
-    },
-    {
       "name": "Deep Squat",
       "type": "Lower",
       "reps": "12",
@@ -62,32 +55,13 @@
       "sets": "5",
       "reps": "5",
       "id": 12
-    },
-    {
-      "name": "icarlysaidit",
-      "type": "Upper",
-      "sets": "10",
-      "reps": "10",
-      "id": 13
-    },
-    {
-      "name": "icarlysaidit",
-      "type": "Upper",
-      "sets": "10",
-      "reps": "10",
-      "id": 14
     }
   ],
   "workoutRoutines": [
     {
       "routineId": 1,
-      "workoutId": 2,
-      "id": 3
-    },
-    {
-      "routineId": 1,
-      "workoutId": 14,
-      "id": 5
+      "workoutId": 11,
+      "id": 6
     }
   ],
   "routines": [

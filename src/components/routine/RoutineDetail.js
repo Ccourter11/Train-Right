@@ -53,9 +53,9 @@ export const RoutineDetail = () => {
           <h3 className="routineDetail__type" id={workout.type}>Type: {workout?.type}</h3>
           <h3 className="routineDetail__reps" id={workout.reps}>Reps: {workout?.reps}</h3>
           <h3 className="routineDetail__sets" id={workout.sets}>Sets: {workout?.sets}</h3> 
-          <button id={routines?.id} onClick={deletedRoutine}>Release Routine</button>
-          <button id={workout?.id} onClick={handleDelete}>Release Workout</button>
-          <button onClick={() => {
+          <button className="deleteRoutineBtn" id={routines?.id} onClick={deletedRoutine}>Release Routine</button>
+          <button className="deleteWorkoutBtn" id={workout?.id} onClick={handleDelete}>Release Workout</button>
+          <button className="editRoutineBtn" onClick={() => {
             history.push(`/routines/edit/${workout.id}`)
           }}>Edit</button>
           <hr/>

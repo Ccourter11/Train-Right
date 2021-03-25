@@ -1,13 +1,6 @@
 {
   "workouts": [
     {
-      "id": 1,
-      "name": "Trent lifted",
-      "type": "Lower",
-      "reps": 2,
-      "sets": 2
-    },
-    {
       "id": 2,
       "name": "Sages Lift is too simple",
       "type": "Lower",
@@ -55,33 +48,37 @@
       "sets": "3",
       "reps": "10",
       "id": 8
+    },
+    {
+      "name": "Peytons stroke ",
+      "type": "Lower",
+      "sets": "2",
+      "reps": "2",
+      "id": 9
+    },
+    {
+      "name": "Peytons stroke ",
+      "type": "Lower",
+      "sets": "2",
+      "reps": "2",
+      "id": 10
     }
   ],
   "workoutRoutines": [
     {
-      "routineId": 1,
-      "workoutId": 6,
-      "id": 1
-    },
-    {
-      "routineId": 1,
-      "workoutId": 5,
-      "id": 2
-    },
-    {
-      "routineId": 1,
-      "workoutId": 1,
-      "id": 3
-    },
-    {
-      "routineId": 2,
+      "routineId": 3,
       "workoutId": 3,
-      "id": 4
+      "id": 7
     },
     {
-      "routineId": 2,
+      "routineId": 3,
       "workoutId": 4,
-      "id": 5
+      "id": 8
+    },
+    {
+      "routineId": 1,
+      "workoutId": 2,
+      "id": 9
     }
   ],
   "routines": [
@@ -92,10 +89,10 @@
       "date": "03-15-2021"
     },
     {
-      "routineName": "thursdayyyyy",
-      "date": "2021-03-25",
-      "userId": 1,
-      "id": 2
+      "routineName": "Katies leg day",
+      "date": "2021-03-26",
+      "userId": 2,
+      "id": 3
     }
   ],
   "users": [

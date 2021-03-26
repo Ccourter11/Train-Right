@@ -28,8 +28,7 @@ export const WorkoutList = () => {
       // This is my dependency array. 
       // Logic within functions only occur when a function is invoked.
       //  Within a React component, useEffect is a function. 
-      // After the return, useEffect is automatically invoked and since the dependency array is empty, it only runs the first time the component renders.
-      // You can include dependencies in the array to cause the useEffect to run additional times.
+      // After the return, useEffect is automatically invoked and since the dependency array is empty, it only runs the first time the component renders. You can include dependencies in the array to cause the useEffect to run additional times.
 
        // useEffect dependency array with dependencies - will run if dependency changes (state)
 

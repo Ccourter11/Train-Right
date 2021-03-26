@@ -33,18 +33,19 @@
       "userId": 1
     },
     {
-      "name": "Phil ",
+      "name": "Jill ",
       "type": "Upper",
       "sets": "1",
       "reps": "1",
-      "id": 11
+      "id": 11,
+      "userId": 2
     },
     {
       "name": "lfboudb",
       "type": "Upper",
       "sets": "2",
       "reps": "2",
-      "userId": 1,
+      "userId": 2,
       "id": 12
     },
     {
@@ -52,7 +53,7 @@
       "type": "Upper",
       "sets": "1",
       "reps": "1",
-      "userId": 1,
+      "userId": 2,
       "id": 13
     },
     {
@@ -62,6 +63,14 @@
       "reps": "1",
       "userId": 2,
       "id": 14
+    },
+    {
+      "name": "Sages Lift for friday",
+      "type": "Lower",
+      "sets": "1",
+      "reps": "1",
+      "userId": 1,
+      "id": 15
     }
   ],
   "workoutRoutines": [
@@ -109,6 +118,12 @@
       "date": "2021-03-26",
       "userId": 2,
       "id": 3
+    },
+    {
+      "routineName": "best friday ever",
+      "date": "2021-04-02",
+      "userId": 2,
+      "id": 4
     }
   ],
   "users": [

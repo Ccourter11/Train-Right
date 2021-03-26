@@ -2,11 +2,11 @@
   "workouts": [
     {
       "id": 5,
-      "name": "Push upsss",
+      "name": "Push up",
       "type": "Upper",
       "reps": 12,
       "sets": 20,
-      "workoutId": 1
+      "userId": 1
     },
     {
       "id": 7,
@@ -14,7 +14,7 @@
       "type": "Upper",
       "reps": 10,
       "sets": 3,
-      "workoutId": 1
+      "userId": 1
     },
     {
       "name": "Finger Push Ups",
@@ -22,7 +22,7 @@
       "sets": "3",
       "reps": "10",
       "id": 8,
-      "workoutId": 1
+      "userId": 1
     },
     {
       "name": "Peytons swing",
@@ -30,43 +30,38 @@
       "sets": "2",
       "reps": "2",
       "id": 10,
-      "workoutId": 1
+      "userId": 1
     },
     {
-      "id": 11,
-      "name": "Chin Ups",
+      "name": "Phil ",
       "type": "Upper",
-      "reps": 6,
-      "sets": 5
+      "sets": "1",
+      "reps": "1",
+      "id": 11
     },
     {
-      "name": "Hand Helds",
+      "name": "lfboudb",
       "type": "Upper",
-      "sets": "5",
-      "reps": "5",
+      "sets": "2",
+      "reps": "2",
+      "userId": 1,
       "id": 12
     },
     {
-      "name": "Goblet Squaat",
-      "type": "Lower",
-      "sets": "8",
-      "reps": "4",
+      "name": "jim jon",
+      "type": "Upper",
+      "sets": "1",
+      "reps": "1",
+      "userId": 1,
       "id": 13
     },
     {
-      "name": "Deep lung",
-      "type": "Lower",
-      "sets": "2",
-      "reps": "2",
-      "id": 14
-    },
-    {
-      "name": "Jisie lift test",
+      "name": "Jisie example",
       "type": "Upper",
       "sets": "1",
       "reps": "1",
       "userId": 2,
-      "id": 15
+      "id": 14
     }
   ],
   "workoutRoutines": [

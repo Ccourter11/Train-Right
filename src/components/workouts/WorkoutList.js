@@ -1,6 +1,7 @@
 import React, { useEffect, useContext, useState } from "react"
 import { WorkoutCard } from "./WorkoutCard"
 import "./Workout.css"
+import { userStorageKey } from "../auth/authSettings"
 import Button from 'react-bootstrap/Button'
 
 
@@ -14,6 +15,8 @@ export const WorkoutList = () => {
     const { workouts, getWorkouts, searchTerms } = useContext(WorkoutContext)
     const [filteredWorkouts, setFilteredWorkouts] = useState([])
     
+    let currentUser = parseInt(sessionStorage.getItem(userStorageKey))
+    let userWorkouts = workouts.filter(workout => currentUser === workout.userId)
 
 
     const history = useHistory()
@@ -34,11 +37,11 @@ export const WorkoutList = () => {
         useEffect(() => {
           if (searchTerms !== "") {
             // If the search field is not blank, display matching workouts
-            const subset = workouts.filter(workout => workout.name.toLowerCase().includes(searchTerms.toLowerCase()))
+            const subset = userWorkouts.filter(workout => workout.name.toLowerCase().includes(searchTerms.toLowerCase()))
             setFilteredWorkouts(subset)
           } else {
             // If the search field is blank, display all workouts
-            setFilteredWorkouts(workouts)
+            setFilteredWorkouts(userWorkouts)
           }
         }, [searchTerms, workouts])
 
@@ -54,8 +57,8 @@ export const WorkoutList = () => {
 
         <div className="workouts">
           <div className="typeBtn">
-          <button onClick={() => setFilteredWorkouts(workouts.filter(workout=> workout.type === "Upper"))}>Upper</button>
-          <button onClick={() => setFilteredWorkouts(workouts.filter(workout=> workout.type === "Lower"))}>Lower</button>
+          <button onClick={() => setFilteredWorkouts(userWorkouts.filter(workout=> workout.type === "Upper"))}>Upper</button>
+          <button onClick={() => setFilteredWorkouts(userWorkouts.filter(workout=> workout.type === "Lower"))}>Lower</button>
           </div>
 
       

@@ -9,6 +9,7 @@ export const RoutineList = () => {
   const {routines, getRoutines} = useContext(RoutineContext)
   let currentUser = parseInt(sessionStorage.getItem(userStorageKey))
   let userRoutines = routines.filter(routine => currentUser === routine.userId)
+  // userRoutines is an Array of the current user routines
   
 
   useEffect(() => {

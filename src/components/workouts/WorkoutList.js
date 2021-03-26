@@ -4,7 +4,7 @@ import "./Workout.css"
 import Button from 'react-bootstrap/Button'
 
 
-// The useContext hook, @ line 12, allows you to use data structures and functions that a parent provider, for instance the WorkoutProvider @ line 38, component exposes.
+// The useContext hook allows you to use data structures and functions that a parent provider,the WorkoutProvider, component exposes.
 // To start, you need to import the context object you created in the provider component so that the Context hook can access the objects it exposes
 import { WorkoutContext } from "./WorkoutProvider"
 import { useHistory } from "react-router-dom" // import from libraries before your local modules

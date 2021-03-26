@@ -23,7 +23,7 @@ export const ApplicationViews = () => {
         <RoutineProvider >
             <WorkoutProvider>
                <Route path="/workouts">
-               <WorkoutSearch />
+                 <WorkoutSearch />
                  <WorkoutList />
                </Route>
 

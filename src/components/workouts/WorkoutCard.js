@@ -46,8 +46,8 @@ export const WorkoutCard = (props) => {
         {props.workouts.name}
       </Link>
       </h3>
-      <button onClick={handleAddedWorkout}>Add</button>
-      <label htmlFor="workout">Assign to Routine: </label>
+      <button className="addBtn" onClick={handleAddedWorkout}>Add </button>
+      <label htmlFor="workout"> Assign to Routine: </label>
             <select value={routine.routineId} id="routineId" className="form-control" onChange={handleControlledInputChange}>
               <option value="0">Select a Routine</option>
               {/* to get the data for drop down we need the context */}

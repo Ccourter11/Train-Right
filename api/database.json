@@ -1,32 +1,11 @@
 {
   "workouts": [
     {
-      "id": 1,
-      "name": "Trent lifted",
-      "type": "Lower",
-      "reps": 2,
-      "sets": 2
-    },
-    {
-      "id": 2,
-      "name": "Sages Lift is too simple",
-      "type": "Lower",
-      "reps": 12222,
-      "sets": 122
-    },
-    {
-      "name": "Sumo Squat",
-      "type": "Lower",
-      "reps": "12",
-      "sets": "12",
-      "id": 3
-    },
-    {
+      "id": 4,
       "name": "Deep Squat",
       "type": "Lower",
-      "reps": "12",
-      "sets": "12",
-      "id": 4
+      "reps": "2",
+      "sets": 12
     },
     {
       "id": 5,
@@ -34,13 +13,6 @@
       "type": "Upper",
       "reps": 12,
       "sets": 20
-    },
-    {
-      "name": "Chin Ups",
-      "type": "Upper",
-      "sets": "3",
-      "reps": "16",
-      "id": 6
     },
     {
       "name": "Dips",
@@ -55,33 +27,46 @@
       "sets": "3",
       "reps": "10",
       "id": 8
+    },
+    {
+      "name": "Peytons swing",
+      "type": "Lower",
+      "sets": "2",
+      "reps": "2",
+      "id": 10
+    },
+    {
+      "name": "Chin Ups",
+      "type": "Upper",
+      "sets": "5",
+      "reps": "6",
+      "id": 11
+    },
+    {
+      "name": "Hand Helds",
+      "type": "Upper",
+      "sets": "5",
+      "reps": "5",
+      "id": 12
+    },
+    {
+      "name": "Goblet Squaat",
+      "type": "Lower",
+      "sets": "8",
+      "reps": "4",
+      "id": 13
     }
   ],
   "workoutRoutines": [
     {
       "routineId": 1,
-      "workoutId": 6,
-      "id": 1
+      "workoutId": 11,
+      "id": 6
     },
     {
       "routineId": 1,
-      "workoutId": 5,
-      "id": 2
-    },
-    {
-      "routineId": 1,
-      "workoutId": 1,
-      "id": 3
-    },
-    {
-      "routineId": 2,
-      "workoutId": 3,
-      "id": 4
-    },
-    {
-      "routineId": 2,
       "workoutId": 4,
-      "id": 5
+      "id": 7
     }
   ],
   "routines": [
@@ -90,12 +75,6 @@
       "userId": 1,
       "routineName": "Monday Session",
       "date": "03-15-2021"
-    },
-    {
-      "routineName": "thursdayyyyy",
-      "date": "2021-03-25",
-      "userId": 1,
-      "id": 2
     }
   ],
   "users": [
@@ -103,11 +82,6 @@
       "id": 1,
       "name": "calvin",
       "email": "courter@yahoo.com"
-    },
-    {
-      "email": "katie@gmail.com",
-      "name": "Katie Kline",
-      "id": 2
     }
   ]
 }

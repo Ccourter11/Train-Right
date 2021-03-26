@@ -45,12 +45,7 @@ export const WorkoutForm = () => {
       if (workoutId) {
         updateWorkout(workout)
         .then(history.push("/workouts"))
-    } else { 
-      //invoke addCustomer passing customer as an argument.
-       addWorkout(workout)
-      //change the url and display the customer list
-      .then(history.push("/workouts"))
-      }
+    } 
   }
 
     useEffect(() => {

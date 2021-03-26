@@ -42,7 +42,7 @@ export const RoutineProvider = (props) => {
       }
 
       const releaseRoutineWorkout = routineId => {
-        return fetch(`http://localhost:8088/workoutRoutines/${routineId}`, {
+        return fetch(`http://localhost:8088/workouts/${routineId}`, {
             method: "DELETE"
         })
             .then(getRoutines)

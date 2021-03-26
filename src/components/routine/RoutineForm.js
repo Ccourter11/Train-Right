@@ -7,7 +7,7 @@ import { userStorageKey } from "../auth/authSettings"
 export const RoutineForm = () => {
   const {saveRoutine, updateRoutine, getRoutineById} = useContext(RoutineContext)
   let currentUser = parseInt(sessionStorage.getItem(userStorageKey))
-
+ //Define the intial state of the form inputs with useState()
   const [routine, setRoutine] = useState({
     routineName: "",
     date: 0,
@@ -20,12 +20,16 @@ export const RoutineForm = () => {
 
   const handleControlledInputChange = (event) => {
     let newRoutine = {...routine}
+    //routine is an object with properties
+    // When changing a state object or array, always create a copy, make changes, and then set state.
 
     let setVal = event.target.value
 
     newRoutine[event.target.id] = setVal
+    // Set the property to the new value using object bracket notation.
 
     setRoutine(newRoutine)
+      // update state
   }
 
 

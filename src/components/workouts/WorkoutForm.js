@@ -14,7 +14,8 @@ export const WorkoutForm = () => {
       "name": "",
       "type": "",
       "sets": 0,
-      "reps": 0
+      "reps": 0,
+      userId: parseInt(sessionStorage.getItem("app_user_id"))
     })
     
     const history = useHistory()

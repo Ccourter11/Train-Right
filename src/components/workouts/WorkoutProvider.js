@@ -10,6 +10,7 @@ export const WorkoutProvider = (props) => {
 const [workouts, setWorkouts] = useState([])
 const [searchTerms, setSearchTerms ] = useState("")
 
+// function to get all workouts
 const getWorkouts = () => {
     return fetch("http://localhost:8088/workouts")
       .then(response => response.json())
@@ -23,15 +24,18 @@ const getWorkouts = () => {
             "Content-Type": "application/json"
         },
         body: JSON.stringify(workouts)
-    })
+      })
+      // get the new object back
     .then(getWorkouts)
   }
 
+  // function to get workout by ID
   const getWorkoutById = (id) => {
     return fetch(`http://localhost:8088/workouts/${id}`)
         .then(res => res.json())
   }
   
+  // function to delete a workout
   const releaseWorkout = workoutId => {
     return fetch(`http://localhost:8088/workouts/${workoutId}`, {
         method: "DELETE"
@@ -39,6 +43,7 @@ const getWorkouts = () => {
         .then(getWorkouts)
   }
 
+  // function to edit an workout
   const updateWorkout = workout => {
     return fetch(`http://localhost:8088/workouts/${workout.id}`, {
         method: "PUT",
@@ -49,6 +54,7 @@ const getWorkouts = () => {
     })
     .then(getWorkouts)
   }
+  // function to add workout to routine
   const AddedWorkout = workoutsRoutine => {
     return fetch("http://localhost:8088/workoutRoutines", {
         method: "POST",
@@ -59,6 +65,7 @@ const getWorkouts = () => {
     })
     .then(getWorkoutRoutine)
   }
+  //  function to get all workoutRoutines
   const getWorkoutRoutine = () => {
     return fetch("http://localhost:8088/workoutRoutines")
       .then(response => response.json())

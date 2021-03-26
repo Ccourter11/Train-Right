@@ -7,7 +7,6 @@
       "reps": 12,
       "sets": 20,
       "workoutId": 1
-
     },
     {
       "id": 7,
@@ -60,6 +59,14 @@
       "sets": "2",
       "reps": "2",
       "id": 14
+    },
+    {
+      "name": "Jisie lift test",
+      "type": "Upper",
+      "sets": "1",
+      "reps": "1",
+      "userId": 2,
+      "id": 15
     }
   ],
   "workoutRoutines": [

@@ -3,10 +3,13 @@ import "./Workout.css"
 import { Link } from "react-router-dom"
 import { WorkoutContext } from "./WorkoutProvider";
 import { RoutineContext } from "../routine/RoutineProvider"
+import { userStorageKey } from "../auth/authSettings"
 
 export const WorkoutCard = (props) => {
   const { getRoutines, routines } = useContext(RoutineContext)
   const {AddedWorkout} = useContext(WorkoutContext)
+  let currentUser = parseInt(sessionStorage.getItem(userStorageKey))
+  let userRoutines = routines.filter(routine => currentUser === routine.userId)
 
 
   const handleAddedWorkout = () => {
@@ -51,7 +54,7 @@ export const WorkoutCard = (props) => {
             <select value={routine.routineId} id="routineId" className="form-control" onChange={handleControlledInputChange}>
               <option value="0">Select a Routine</option>
               {/* to get the data for drop down we need the context */}
-              {routines.map(r => (
+              {userRoutines.map(r => (
                 <option key={r.id} value={r.id}>
                   {r.routineName}
                   {/* because this is react, im looping over something and creating a jsx element, i do need a key, a key needs to be a unquie identifier bc we already have an id that acts like a unique identifier, we use the id as the key. the value of of option tag is going to beid bc thats what we want to capture and then what the user sees is going to be the name  */}

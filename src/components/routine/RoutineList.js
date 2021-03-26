@@ -8,7 +8,10 @@ import { userStorageKey } from "../auth/authSettings"
 export const RoutineList = () => {
   const {routines, getRoutines} = useContext(RoutineContext)
   let currentUser = parseInt(sessionStorage.getItem(userStorageKey))
-  let userRoutines = routines.filter(routine => currentUser === routine.userId)
+  let userRoutines = routines.filter(routine => routine.userId === currentUser)
+  // if the currentUser id is 1 , return an array of all the routines that have that userId
+  // userRoutines is an Array of the current user routines 
+ 
   
 
   useEffect(() => {
@@ -27,6 +30,7 @@ export const RoutineList = () => {
     <div className="routines">
       {
       userRoutines.map(routine => {
+         // we map over the userRoutines array to return the each current users routines only 
         return <RoutineCard key={routine.id} routine={routine} />
       })
       }

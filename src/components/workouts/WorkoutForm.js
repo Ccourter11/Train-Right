@@ -45,12 +45,7 @@ export const WorkoutForm = () => {
       if (workoutId) {
         updateWorkout(workout)
         .then(history.push("/workouts"))
-    } else { 
-      //invoke addWorkout passing workout as an argument.
-       addWorkout(workout)
-      //change the url and display the workouts list
-      .then(history.push("/workouts"))
-      }
+    } 
   }
 
     useEffect(() => {

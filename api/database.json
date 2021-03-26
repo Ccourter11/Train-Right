@@ -1,11 +1,11 @@
 {
   "workouts": [
     {
+      "id": 4,
       "name": "Deep Squat",
       "type": "Lower",
-      "reps": "12",
-      "sets": "12",
-      "id": 4
+      "reps": "2",
+      "sets": 12
     },
     {
       "id": 5,
@@ -29,13 +29,6 @@
       "id": 8
     },
     {
-      "name": "Peytons stroke ",
-      "type": "Lower",
-      "sets": "2",
-      "reps": "2",
-      "id": 9
-    },
-    {
       "name": "Peytons swing",
       "type": "Lower",
       "sets": "2",
@@ -55,6 +48,13 @@
       "sets": "5",
       "reps": "5",
       "id": 12
+    },
+    {
+      "name": "Goblet Squaat",
+      "type": "Lower",
+      "sets": "8",
+      "reps": "4",
+      "id": 13
     }
   ],
   "workoutRoutines": [
@@ -62,6 +62,11 @@
       "routineId": 1,
       "workoutId": 11,
       "id": 6
+    },
+    {
+      "routineId": 1,
+      "workoutId": 4,
+      "id": 7
     }
   ],
   "routines": [

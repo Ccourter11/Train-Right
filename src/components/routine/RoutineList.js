@@ -9,8 +9,8 @@ export const RoutineList = () => {
   const {routines, getRoutines} = useContext(RoutineContext)
   let currentUser = parseInt(sessionStorage.getItem(userStorageKey))
   let userRoutines = routines.filter(routine => routine.userId === currentUser)
-  // 
-  // userRoutines is an Array of the current user routines
+  // if the currentUser id is 1 , return an array of all the routines that have that userId
+  // userRoutines is an Array of the current user routines 
  
   
 

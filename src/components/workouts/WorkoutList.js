@@ -54,7 +54,9 @@ export const WorkoutList = () => {
         <div className="workouts">
           <div className="typeBtn">
           <button onClick={() => setFilteredWorkouts(userWorkouts.filter(workout=> workout.type === "Upper"))}>Upper</button>
+          {/* if the currently logged in user  has any workouts with a type of upper, return them */}
           <button onClick={() => setFilteredWorkouts(userWorkouts.filter(workout=> workout.type === "Lower"))}>Lower</button>
+          {/* if the currently logged in user  has any workouts with a type of lower, return them */}
           </div>          
         {
         filteredWorkouts.map(workout => {

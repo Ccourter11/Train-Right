@@ -62,7 +62,7 @@ export const WorkoutList = () => {
         })
         }
       </div>
-      {/* we use the .map() array method to iterate the array of userWorkouts and generate HTML for each one by invoking the WorkoutCard component function */}
+      {/* we use the .map() array method to iterate the array of filteredWorkouts and generate HTML for each one by invoking the WorkoutCard component function */}
 
       {/* the 'key' and 'workouts' arguments become properties on an object that gets passed as an argument */}
       </>

@@ -57,12 +57,11 @@
       "id": 13
     },
     {
+      "id": 14,
       "name": "Jisie example",
       "type": "Upper",
-      "sets": "1",
-      "reps": "1",
-      "userId": 2,
-      "id": 14
+      "reps": 1,
+      "sets": 1
     },
     {
       "name": "Sages Lift for friday",
@@ -118,12 +117,6 @@
       "date": "2021-03-26",
       "userId": 2,
       "id": 3
-    },
-    {
-      "routineName": "best friday ever",
-      "date": "2021-04-02",
-      "userId": 2,
-      "id": 4
     }
   ],
   "users": [

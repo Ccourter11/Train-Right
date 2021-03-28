@@ -8,6 +8,7 @@ import "./Workout.css"
 
 export const WorkoutForm = () => {
     const { addWorkout,getWorkouts, updateWorkout, getWorkoutById } = useContext(WorkoutContext) 
+    // the reason the setIsLoading's initial state is set to true is that your whole component actually is in such state initially and then you set it to false after fetched data is ready
     const [ isLoading, setIsLoading ] = useState(true);
     //Define the intial state of the form inputs with useState()
     const [workout, setWorkout] = useState({

@@ -7,11 +7,11 @@ import { WorkoutContext } from "../workouts/WorkoutProvider"
 export const RoutineDetail = () => {
     const { getRoutineById, releaseRoutineWorkout, deleteRoutine } = useContext(RoutineContext)
     const [routine, setRoutine] = useState({})
+    // include useParams from react-router-dom to allow the app to read a parameter from the URL
     const {routineId} = useParams();
     const {getWorkoutById} = useContext(WorkoutContext)
     const [workouts, SetWorkouts] = useState([])
     
-      // include useParams from react-router-dom to allow the app to read a parameter from the URL
       const history = useHistory();
   
 

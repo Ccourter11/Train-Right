@@ -79,6 +79,7 @@ const getWorkouts = () => {
     .then(response => response.json())
     .then(response => setTypes(response))
   }
+  
    /*
       You return a context provider which has the
       `workouts` state and the `getWorkouts` function as keys.

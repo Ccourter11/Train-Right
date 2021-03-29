@@ -9,12 +9,15 @@ export const WorkoutProvider = (props) => {
 // Next, you will use the useState() hook to define a variable that holds the state of the component, and a function that updates it
 const [workouts, setWorkouts] = useState([])
 const [searchTerms, setSearchTerms ] = useState("")
+const [types, setTypes] = useState([])
 
 // function to get all workouts
 const getWorkouts = () => {
     return fetch("http://localhost:8088/workouts")
       .then(response => response.json())
+      // from json to JS^
       .then(workouts => setWorkouts(workouts))
+       // sets response to the state var workouts
   }
 
   const addWorkout = workouts => {
@@ -71,6 +74,11 @@ const getWorkouts = () => {
       .then(response => response.json())
   }
 
+  const getTypes = () => {
+    return fetch("http://localhost:8088/types")
+    .then(response => response.json())
+    .then(response => setTypes(response))
+  }
    /*
       You return a context provider which has the
       `workouts` state and the `getWorkouts` function as keys.
@@ -79,7 +87,7 @@ const getWorkouts = () => {
       return (
         <WorkoutContext.Provider value={{
           
-          workouts, getWorkouts, addWorkout, getWorkoutById, updateWorkout, releaseWorkout, AddedWorkout, getWorkoutRoutine, searchTerms, setSearchTerms
+          workouts, getWorkouts, addWorkout, getWorkoutById, updateWorkout, releaseWorkout, AddedWorkout, getWorkoutRoutine, searchTerms, setSearchTerms, getTypes, types
         }}>
           {props.children}
         </WorkoutContext.Provider>

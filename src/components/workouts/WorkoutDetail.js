@@ -40,6 +40,3 @@ export const WorkoutDetail = () => {
     )
   }
 
-//   <button onClick={() => {
-//     history.push(`/workouts/edit/${workout.id}`)
-// }}>Edit</button>

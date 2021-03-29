@@ -7,12 +7,13 @@ import { userStorageKey } from "../auth/authSettings"
 
 
 export const WorkoutForm = () => {
-    const { types, getTypes, workouts, addWorkout, getWorkouts, updateWorkout, getWorkoutById } = useContext(WorkoutContext) 
+    const { types, getTypes, addWorkout, getWorkouts, updateWorkout, getWorkoutById } = useContext(WorkoutContext) 
     let currentUser = parseInt(sessionStorage.getItem(userStorageKey))
     // let userWorkouts = types.filter(type => currentUser === type.userId)
 
     // the reason the setIsLoading's initial state is set to true is that your whole component actually is in such state initially and then you set it to false after fetched data is ready
     const [ isLoading, setIsLoading ] = useState(true);
+
     //Define the intial state of the form inputs with useState()
     const [workout, setWorkout] = useState({
       "name": "",
@@ -23,6 +24,7 @@ export const WorkoutForm = () => {
     })
     
     const history = useHistory()
+    // include useParams from react-router-dom to allow the app to read a parameter from the URL
     const {workoutId} = useParams();
 
     // after a change, save it
@@ -132,7 +134,7 @@ export const WorkoutForm = () => {
             {types.map(t => (
                 <option key={t.id} value={t.id}>
                   {t.name}
-                  {/* because this is react, im looping over something and creating a jsx element, i do need a key, a key needs to be a unquie identifier bc we already have an id that acts like a unique identifier, we use the id as the key. the value of of option tag is going to beid bc thats what we want to capture and then what the user sees is going to be the name  */}
+                  {/* because this is react, im looping over something and creating a jsx element, i do need a key, a key needs to be a unquie identifier bc we already have an id that acts like a unique identifier, we use the id as the key. the value of of option tag is going to be id bc thats what we want to capture and then what the user sees is going to be the name  */}
                 </option>
             ))}
              </select> 

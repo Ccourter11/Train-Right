@@ -7,6 +7,30 @@
       "reps": 12,
       "userId": 2,
       "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Pull Up",
+      "typeId": 1,
+      "sets": 4,
+      "reps": 10,
+      "userId": 1
+    },
+    {
+      "name": "Goblet Squaat",
+      "typeId": 2,
+      "sets": 5,
+      "reps": 20,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "name": "Jump rope",
+      "typeId": 2,
+      "sets": 3,
+      "reps": 100,
+      "userId": 1,
+      "id": 4
     }
   ],
   "workoutRoutines": [
@@ -14,6 +38,11 @@
       "routineId": 1,
       "workoutId": 2,
       "id": 2
+    },
+    {
+      "routineId": 2,
+      "workoutId": 2,
+      "id": 3
     }
   ],
   "routines": [
@@ -22,6 +51,12 @@
       "date": "2021-03-29",
       "userId": 2,
       "id": 1
+    },
+    {
+      "routineName": "Mix up!",
+      "date": "2021-03-29",
+      "userId": 1,
+      "id": 2
     }
   ],
   "users": [

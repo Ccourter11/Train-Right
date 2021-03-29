@@ -2,7 +2,7 @@ import React, { useEffect, useContext, useState } from "react"
 import { WorkoutCard } from "./WorkoutCard"
 import "./Workout.css"
 import { userStorageKey } from "../auth/authSettings"
-// import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button'
 
 // The useContext hook allows you to use data structures and functions that a parent provider,the WorkoutProvider, component exposes.
 // To start, you need to import the context object you created in the provider component so that the Context hook can access the objects it exposes
@@ -47,9 +47,9 @@ export const WorkoutList = () => {
         <>  
         <h2 className="workouts__title">Workouts</h2>
         <div className="createBtn">
-        <button onClick={() => history.push("/workouts/create")}>
+        <Button onClick={() => history.push("/workouts/create")}>
           Create Workout
-        </button>
+        </Button>
         </div>
        
         <div className="workouts">

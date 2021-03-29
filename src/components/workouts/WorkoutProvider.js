@@ -79,6 +79,10 @@ const getWorkouts = () => {
     .then(response => response.json())
     .then(response => setTypes(response))
   }
+  // const getTypesByName = (name) => {
+  //   return fetch(`http://localhost:8088/types/${name}`)
+  //       .then(res => res.json())
+  // }
   
    /*
       You return a context provider which has the

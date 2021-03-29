@@ -3,7 +3,7 @@ import { RoutineContext } from "./RoutineProvider"
 import { RoutineCard } from "./RoutineCard"
 import { useHistory } from "react-router"
 import { userStorageKey } from "../auth/authSettings"
-
+import Button from 'react-bootstrap/Button'
 
 export const RoutineList = () => {
   const {routines, getRoutines} = useContext(RoutineContext)
@@ -23,9 +23,9 @@ export const RoutineList = () => {
     <>
     <h2 className="routines__title">Routines</h2>
         <div className="createBtn">
-        <button  onClick={() => history.push("/routines/create")}>
+        <Button  onClick={() => history.push("/routines/create")}>
           Create Routine
-        </button>
+        </Button>
         </div>
     <div className="routines">
       {

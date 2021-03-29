@@ -7,6 +7,7 @@ import "./Workout.css"
 export const WorkoutDetail = () => {
     const { getWorkoutById, releaseWorkout } = useContext(WorkoutContext)
     const [workout, setWorkout] = useState({})
+ 
    
       
     const {workoutId} = useParams();
@@ -20,6 +21,10 @@ export const WorkoutDetail = () => {
       })
     }
     
+    // useEffect(() => {
+    //  setTypes()
+    //   }
+    // }, [])
   
     useEffect(() => {
       getWorkoutById(parseInt(workoutId))
@@ -35,9 +40,9 @@ export const WorkoutDetail = () => {
         <div className="workout__reps">Reps: {workout.reps}</div>
         <div className="workout__sets">Sets: {workout.sets}</div>
         <Button onClick={handleRelease}>Release Workout</Button>
-        <button className="editWorkoutBtn" onClick={() => {
+        <Button className="editWorkoutBtn" onClick={() => {
           history.push(`/workouts/edit/${workout.id}`)
-            }}>Edit</button>
+            }}>Edit</Button>
       </div>
     )
   }

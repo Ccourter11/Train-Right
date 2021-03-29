@@ -3,7 +3,7 @@ import { useHistory, useParams } from "react-router-dom"
 import { WorkoutContext } from "./WorkoutProvider"
 import "./Workout.css"
 import { userStorageKey } from "../auth/authSettings"
-
+import Button from 'react-bootstrap/Button'
 
 
 export const WorkoutForm = () => {
@@ -147,9 +147,9 @@ export const WorkoutForm = () => {
             <label htmlFor="sets">Sets: </label>
             <input type="number" id="sets" onChange={handleControlledInputChange} value={workout.sets} required></input>
           </fieldset>
-          <button variant="primary" className="btn" onClick={handleSaveWorkout}>
+          <Button variant="primary" className="btn" onClick={handleSaveWorkout}>
             Save Workout
-          </button>
+          </Button>
         </form>
       )
     }

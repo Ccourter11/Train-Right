@@ -9,21 +9,12 @@
   display: grid;
   justify-content: center;
 }
-.addBtn,.deleteWorkoutBtn, .editWorkoutBtn  {
-  background-color: rgba(149, 149, 150, 0.722);
-  border-radius: 12px;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-  align-items: center;
-}
+
 .workouts__title {
   display: flex;
   justify-content: center;
 }
-/* .workouts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  } */
+
 .workout {
     flex-basis: 28%;
     margin: 1em;

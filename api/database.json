@@ -1,21 +1,39 @@
 {
   "workouts": [
     {
-      "name": "Push up",
-      "typeId": 1,
-      "sets": 3,
+      "name": "Squat Jump",
+      "typeId": 2,
+      "sets": 2,
       "reps": 12,
       "userId": 2,
       "id": 1
     }
   ],
-  "workoutRoutines": [],
-  "routines": [],
+  "workoutRoutines": [
+    {
+      "routineId": 1,
+      "workoutId": 2,
+      "id": 2
+    }
+  ],
+  "routines": [
+    {
+      "routineName": "Monday Funday",
+      "date": "2021-03-29",
+      "userId": 2,
+      "id": 1
+    }
+  ],
   "users": [
     {
       "id": 1,
       "name": "calvin",
       "email": "courter@yahoo.com"
+    },
+    {
+      "email": "jd@gmail.com",
+      "name": "Jisie David",
+      "id": 2
     }
   ],
   "types": [

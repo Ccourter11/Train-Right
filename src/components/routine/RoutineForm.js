@@ -16,6 +16,7 @@ export const RoutineForm = () => {
 
   const history = useHistory()
   const [isLoading, setIsLoading] = useState(true);
+  // include useParams from react-router-dom to allow the app to read a parameter from the URL
   const {routineId} = useParams()
 
   const handleControlledInputChange = (event) => {

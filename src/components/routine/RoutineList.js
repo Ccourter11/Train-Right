@@ -32,6 +32,7 @@ export const RoutineList = () => {
       userRoutines.map(routine => {
          // we map over the userRoutines array to return the each current users routines only 
         return <RoutineCard key={routine.id} routine={routine} />
+        {/* the 'key' and 'routine' arguments become properties on an object that gets passed as an argument */}
       })
       }
     </div>

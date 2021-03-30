@@ -13,7 +13,6 @@ export const RoutineList = () => {
   // userRoutines is an Array of the current user routines 
  
   
-
   useEffect(() => {
     getRoutines()
   }, [])

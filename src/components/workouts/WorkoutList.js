@@ -42,6 +42,7 @@ export const WorkoutList = () => {
             setFilteredWorkouts(userWorkouts)
           }
         }, [searchTerms, workouts])
+        // may need to remove workouts^
 
       return (
         <>  

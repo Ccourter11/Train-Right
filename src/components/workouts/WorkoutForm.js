@@ -85,6 +85,7 @@ export const WorkoutForm = () => {
   }, [])
 
     useEffect(() => {
+      // will need to get rid of getWorkouts here below
       getWorkouts().then(() => {
 
           // if there is data

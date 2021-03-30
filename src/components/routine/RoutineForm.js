@@ -15,6 +15,7 @@ export const RoutineForm = () => {
   })
 
   const history = useHistory()
+  
   const [isLoading, setIsLoading] = useState(true);
   // include useParams from react-router-dom to allow the app to read a parameter from the URL
   const {routineId} = useParams()
@@ -27,7 +28,7 @@ export const RoutineForm = () => {
     let setVal = event.target.value
 
     newRoutine[event.target.id] = setVal
-    // Set the property to the new value using object bracket notation.
+    // Set the property to the new value using bracket notation.
 
     setRoutine(newRoutine)
       // update state

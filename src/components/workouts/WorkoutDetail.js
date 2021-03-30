@@ -12,6 +12,7 @@ export const WorkoutDetail = () => {
       
     const {workoutId} = useParams();
     // include useParams from react-router-dom to allow the app to read a parameter from the URL
+    
     const history = useHistory();
 
   

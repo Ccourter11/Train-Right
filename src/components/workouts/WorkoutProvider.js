@@ -31,6 +31,17 @@ const getWorkouts = () => {
       // get the new object back
     .then(getWorkouts)
   }
+  // function to edit an workout
+  const updateWorkout = workout => {
+    return fetch(`http://localhost:8088/workouts/${workout.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(workout)
+    })
+    .then(getWorkouts)
+  }
 
   // function to get workout by ID
   const getWorkoutById = (id) => {
@@ -46,17 +57,6 @@ const getWorkouts = () => {
         .then(getWorkouts)
   }
 
-  // function to edit an workout
-  const updateWorkout = workout => {
-    return fetch(`http://localhost:8088/workouts/${workout.id}`, {
-        method: "PUT",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(workout)
-    })
-    .then(getWorkouts)
-  }
   // function to add workout to routine
   const AddedWorkout = workoutsRoutine => {
     return fetch("http://localhost:8088/workoutRoutines", {

@@ -2,10 +2,10 @@
   "workouts": [
     {
       "id": 1,
-      "name": "Lung",
-      "typeId": 2,
-      "sets": 12,
-      "reps": 10,
+      "name": "Lungeseses",
+      "typeId": 1,
+      "sets": 120314,
+      "reps": 1112,
       "userId": 1
     },
     {
@@ -15,6 +15,14 @@
       "reps": 20,
       "userId": 1,
       "id": 2
+    },
+    {
+      "name": "Push Up",
+      "typeId": 1,
+      "sets": 10,
+      "reps": 10,
+      "userId": 1,
+      "id": 3
     }
   ],
   "workoutRoutines": [

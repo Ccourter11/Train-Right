@@ -34,7 +34,7 @@ const getWorkouts = () => {
 
   // function to get workout by ID
   const getWorkoutById = (id) => {
-    return fetch(`http://localhost:8088/workouts/${id}`)
+    return fetch(`http://localhost:8088/workouts/${id}?_expand=type`)
         .then(res => res.json())
   }
   

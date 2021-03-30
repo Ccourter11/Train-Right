@@ -1,75 +1,45 @@
 {
   "workouts": [
     {
-      "id": 2,
-      "name": "Pull Up",
-      "typeId": 1,
-      "sets": 4,
+      "id": 1,
+      "name": "Lung",
+      "typeId": 2,
+      "sets": 12,
       "reps": 10,
       "userId": 1
     },
     {
-      "name": "Goblet Squaat",
-      "typeId": 2,
-      "sets": 5,
-      "reps": 20,
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "name": "Jump rope",
+      "name": "Squat Jump",
       "typeId": 2,
       "sets": 3,
-      "reps": 100,
+      "reps": 20,
       "userId": 1,
-      "id": 4
-    },
-    {
-      "name": "Push up",
-      "typeId": 1,
-      "sets": 12,
-      "reps": 10,
-      "userId": 2,
-      "id": 5
-    },
-    {
-      "id": 6,
-      "name": "Jogging",
-      "typeId": 2,
-      "sets": 29825,
-      "reps": 2000,
-      "userId": 2
+      "id": 2
     }
   ],
   "workoutRoutines": [
     {
+      "routineId": 0,
+      "workoutId": 1,
+      "id": 1
+    },
+    {
       "routineId": 1,
-      "workoutId": 2,
+      "workoutId": 1,
       "id": 2
     },
     {
-      "routineId": 2,
+      "routineId": 1,
       "workoutId": 2,
       "id": 3
-    },
-    {
-      "routineId": 1,
-      "workoutId": 6,
-      "id": 4
     }
   ],
   "routines": [
     {
-      "routineName": "Monday Funday",
-      "date": "2021-03-29",
-      "userId": 2,
-      "id": 1
-    },
-    {
-      "routineName": "Mix up!",
-      "date": "2021-03-29",
+      "routineName": "Tuesday WhosDay",
+      "date": "2021-03-30",
       "userId": 1,
-      "id": 2
+      "id": 1
     }
   ],
   "users": [

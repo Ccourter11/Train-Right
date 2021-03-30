@@ -55,9 +55,9 @@ export const WorkoutList = () => {
         <div className="workouts">
           <div className="typeBtn">
           {/* <Button variant="primary">Primary</Button> */}
-          <button onClick={() => setFilteredWorkouts(userWorkouts.filter(workout=> workout.typeId === 1))}>Upper</button>
+          <Button onClick={() => setFilteredWorkouts(userWorkouts.filter(workout=> workout.typeId === 1))}>Upper</Button>
           {/* if the currently logged in user  has any workouts with a type of upper, return them */}
-          <button onClick={() => setFilteredWorkouts(userWorkouts.filter(workout=> workout.typeId === 2))}>Lower</button>
+          <Button onClick={() => setFilteredWorkouts(userWorkouts.filter(workout=> workout.typeId === 2))}>Lower</Button>
           {/* if the currently logged in user  has any workouts with a type of lower, return them */}
           </div>          
         {

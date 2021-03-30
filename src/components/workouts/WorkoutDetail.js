@@ -11,8 +11,9 @@ export const WorkoutDetail = () => {
    
       
     const {workoutId} = useParams();
-      // include useParams from react-router-dom to allow the app to read a parameter from the URL
-      const history = useHistory();
+    // include useParams from react-router-dom to allow the app to read a parameter from the URL
+    const history = useHistory();
+
   
     const handleRelease = () => {
         releaseWorkout(workout.id)
@@ -20,11 +21,7 @@ export const WorkoutDetail = () => {
         history.push("/workouts")
       })
     }
-    
-    // useEffect(() => {
-    //  setTypes()
-    //   }
-    // }, [])
+
   
     useEffect(() => {
       getWorkoutById(parseInt(workoutId))
@@ -36,7 +33,7 @@ export const WorkoutDetail = () => {
     return (
       <div className="workoutRoutine">
         <h3 className="workout__name">Name: {workout.name}</h3> 
-        <div className="workout__type">Type: {workout.type}</div>
+        <div className="workout__type">Type: {workout.type?.name} </div>
         <div className="workout__reps">Reps: {workout.reps}</div>
         <div className="workout__sets">Sets: {workout.sets}</div>
         <Button onClick={handleRelease}>Release Workout</Button>

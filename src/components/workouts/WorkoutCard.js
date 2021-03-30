@@ -4,9 +4,10 @@ import { Link } from "react-router-dom"
 import { WorkoutContext } from "./WorkoutProvider";
 import { RoutineContext } from "../routine/RoutineProvider"
 import { userStorageKey } from "../auth/authSettings"
+import Button from 'react-bootstrap/Button'
 
 export const WorkoutCard = (props) => {
-  const { types,getTypes,getRoutines, routines } = useContext(RoutineContext)
+  const { getRoutines, routines } = useContext(RoutineContext)
   const {AddedWorkout} = useContext(WorkoutContext)
   let currentUser = parseInt(sessionStorage.getItem(userStorageKey))
   let userRoutines = routines.filter(routine => currentUser === routine.userId)
@@ -36,6 +37,7 @@ export const WorkoutCard = (props) => {
       //always create a copy make changes, and then set state.
       const newRoutine = { ...routine }
       //routine is an object with properties.
+      
       //set the property to the new value
       newRoutine[event.target.id] = parseInt(event.target.value)
       //update state
@@ -49,7 +51,7 @@ export const WorkoutCard = (props) => {
         {props.workouts.name}
       </Link>
       </h3>
-      <button className="addBtn" onClick={handleAddedWorkout}>Add </button>
+      <Button className="addBtn" variant="primary" onClick={handleAddedWorkout}>Add </Button>
 
       <label htmlFor="workout"> Assign to Routine: </label>
 

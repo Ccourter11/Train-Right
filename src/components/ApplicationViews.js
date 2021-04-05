@@ -23,6 +23,7 @@ export const ApplicationViews = () => {
         <RoutineProvider >
             <WorkoutProvider>
                <Route path="/workouts">
+                 {/* list and search a sibling components */}
                  <WorkoutSearch />
                  <WorkoutList />
                </Route>

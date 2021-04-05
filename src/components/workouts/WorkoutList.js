@@ -9,8 +9,10 @@ import Button from 'react-bootstrap/Button'
 import { WorkoutContext } from "./WorkoutProvider"
 import { useHistory } from "react-router-dom" // import from libraries before your local modules
 
+
 export const WorkoutList = () => {
     // This state changes when `getWorkouts()` is invoked below
+    // WorkoutProvider is only passing searchTerms because workoutList only needs to know what the term is
     const { workouts, getWorkouts, searchTerms } = useContext(WorkoutContext)
     const [filteredWorkouts, setFilteredWorkouts] = useState([])
     
@@ -63,6 +65,7 @@ export const WorkoutList = () => {
           </div>          
         {
         filteredWorkouts.map(workout => {
+          // workout list is our parent component and passes props (data) to our workoutcard, aka our child component
           return <WorkoutCard key={workout.id} workouts={workout} />
         })
         }

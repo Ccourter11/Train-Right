@@ -33,10 +33,10 @@ export const WorkoutDetail = () => {
   
     return (
       <div className="workoutRoutine">
-        <h3 className="workout__name">Name: {workout.name}</h3> 
-        <div className="workout__type">Type: {workout.type?.name} </div>
-        <div className="workout__reps">Reps: {workout.reps}</div>
-        <div className="workout__sets">Sets: {workout.sets}</div>
+        <h3 className="workout__name">Name : {workout.name}</h3> 
+        <div className="workout__type">Type : {workout.type?.name} </div>
+        <div className="workout__reps">Reps : {workout.reps}</div>
+        <div className="workout__sets">Sets : {workout.sets}</div>
         <Button onClick={handleRelease}>Release Workout</Button>
         <Button className="editWorkoutBtn" onClick={() => {
           history.push(`/workouts/edit/${workout.id}`)

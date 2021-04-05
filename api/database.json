@@ -23,6 +23,14 @@
       "reps": 10,
       "userId": 1,
       "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Hannah Hall",
+      "typeId": 2,
+      "sets": 10,
+      "reps": 12,
+      "userId": 1
     }
   ],
   "workoutRoutines": [
@@ -40,6 +48,11 @@
       "routineId": 1,
       "workoutId": 2,
       "id": 3
+    },
+    {
+      "routineId": 2,
+      "workoutId": 4,
+      "id": 4
     }
   ],
   "routines": [
@@ -48,6 +61,12 @@
       "date": "2021-03-30",
       "userId": 1,
       "id": 1
+    },
+    {
+      "routineName": "Monday",
+      "date": "2021-04-05",
+      "userId": 1,
+      "id": 2
     }
   ],
   "users": [

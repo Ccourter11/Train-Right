@@ -6,6 +6,7 @@ import { userStorageKey } from "../auth/authSettings"
 import Button from 'react-bootstrap/Button'
 
 
+
 export const WorkoutForm = () => {
     const { types, getTypes, addWorkout, getWorkouts, updateWorkout, getWorkoutById } = useContext(WorkoutContext) 
     let currentUser = parseInt(sessionStorage.getItem(userStorageKey))
@@ -122,6 +123,7 @@ export const WorkoutForm = () => {
 
           <fieldset className="form-group">
           <label htmlFor="type">Type: </label>
+          {/* <Form.Control > */}
            <select value={workout.typeId} id="typeId" className="upper-lower" onChange={handleControlledInputChange}>
 
            <option value="0">Upper Or Lower</option>
@@ -134,6 +136,7 @@ export const WorkoutForm = () => {
                 </option>
             ))}
              </select> 
+             {/* </Form.Control> */}
            </fieldset>
            
           <fieldset className="form-group">

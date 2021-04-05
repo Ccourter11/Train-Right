@@ -14,6 +14,7 @@ export const WorkoutList = () => {
     // This state changes when `getWorkouts()` is invoked below
     // WorkoutProvider is only passing searchTerms because workoutList only needs to know what the term is
     const { workouts, getWorkouts, searchTerms } = useContext(WorkoutContext)
+    // when the component initially loads, workouts is a blank array
     const [filteredWorkouts, setFilteredWorkouts] = useState([])
     
     let currentUser = parseInt(sessionStorage.getItem(userStorageKey))
@@ -40,10 +41,13 @@ export const WorkoutList = () => {
             // The toLowerCase() method returns the calling string value converted to lower case
             setFilteredWorkouts(subset)
           } else {
-            // If the search field is blank, display all workouts
+            // If the search term is blank, display all workouts
             setFilteredWorkouts(userWorkouts)
           }
         }, [searchTerms, workouts])
+        // we have to check if searchTerms has changed so we can show the correct list of workouts
+        // we are now displaying our filtered array and we dont set that until the useEffect runs
+        // this useEffect runs if any data has been changed and this function will put the data in the filteredWorkouts array  
         // may need to remove workouts^
 
       return (

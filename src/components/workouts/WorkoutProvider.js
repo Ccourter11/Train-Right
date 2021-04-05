@@ -18,6 +18,7 @@ const getWorkouts = () => {
       // from json to JS^
       .then(workouts => setWorkouts(workouts))
        // sets response to the state var workouts
+      //  set state function which retrigger 
   }
 
   const addWorkout = workouts => {

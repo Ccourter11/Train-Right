@@ -25,6 +25,7 @@ export const ApplicationViews = () => {
                <Route path="/workouts">
                  {/* list and search a sibling components */}
                  <WorkoutSearch />
+                 {/* we call the function in workoutSearch, but the change is happening to the variable that lives in WorkoutProvider  */}
                  <WorkoutList />
                </Route>
 

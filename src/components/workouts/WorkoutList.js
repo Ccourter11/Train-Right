@@ -2,16 +2,19 @@ import React, { useEffect, useContext, useState } from "react"
 import { WorkoutCard } from "./WorkoutCard"
 import "./Workout.css"
 import { userStorageKey } from "../auth/authSettings"
-// import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button'
 
 // The useContext hook allows you to use data structures and functions that a parent provider,the WorkoutProvider, component exposes.
 // To start, you need to import the context object you created in the provider component so that the Context hook can access the objects it exposes
 import { WorkoutContext } from "./WorkoutProvider"
 import { useHistory } from "react-router-dom" // import from libraries before your local modules
 
+
 export const WorkoutList = () => {
     // This state changes when `getWorkouts()` is invoked below
+    // WorkoutProvider is only passing searchTerms because workoutList only needs to know what the term is
     const { workouts, getWorkouts, searchTerms } = useContext(WorkoutContext)
+    // when the component initially loads, workouts is a blank array
     const [filteredWorkouts, setFilteredWorkouts] = useState([])
     
     let currentUser = parseInt(sessionStorage.getItem(userStorageKey))
@@ -38,30 +41,37 @@ export const WorkoutList = () => {
             // The toLowerCase() method returns the calling string value converted to lower case
             setFilteredWorkouts(subset)
           } else {
-            // If the search field is blank, display all workouts
+            // If the search term is blank, display all workouts
             setFilteredWorkouts(userWorkouts)
           }
         }, [searchTerms, workouts])
+        // we have to check if searchTerms has changed so we can show the correct list of workouts
+        // we are now displaying our filtered array and we dont set that until the useEffect runs
+        // this useEffect runs if any data has been changed and this function will put the data in the filteredWorkouts array  
+        // may need to remove workouts^
 
       return (
         <>  
+        {/* <img className="logo" src="../trainright.png" /> */}
         <h2 className="workouts__title">Workouts</h2>
         <div className="createBtn">
-        <button onClick={() => history.push("/workouts/create")}>
+        <Button onClick={() => history.push("/workouts/create")}>
           Create Workout
-        </button>
+        </Button>
         </div>
+
        
         <div className="workouts">
           <div className="typeBtn">
           {/* <Button variant="primary">Primary</Button> */}
-          <button onClick={() => setFilteredWorkouts(userWorkouts.filter(workout=> workout.typeId === 1))}>Upper</button>
+          <Button onClick={() => setFilteredWorkouts(userWorkouts.filter(workout=> workout.typeId === 1))}>Upper</Button>
           {/* if the currently logged in user  has any workouts with a type of upper, return them */}
-          <button onClick={() => setFilteredWorkouts(userWorkouts.filter(workout=> workout.typeId === 2))}>Lower</button>
+          <Button onClick={() => setFilteredWorkouts(userWorkouts.filter(workout=> workout.typeId === 2))}>Lower</Button>
           {/* if the currently logged in user  has any workouts with a type of lower, return them */}
           </div>          
         {
         filteredWorkouts.map(workout => {
+          // workout list is our parent component and passes props (data) to our workoutcard, aka our child component
           return <WorkoutCard key={workout.id} workouts={workout} />
         })
         }

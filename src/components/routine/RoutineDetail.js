@@ -3,6 +3,7 @@ import { RoutineContext } from "./RoutineProvider"
 import "./Routine.css"
 import { useParams, useHistory } from "react-router-dom"
 import { WorkoutContext } from "../workouts/WorkoutProvider"
+import Button from 'react-bootstrap/Button'
 
 export const RoutineDetail = () => {
     const { getRoutineById, releaseRoutineWorkout, deleteRoutine } = useContext(RoutineContext)
@@ -57,14 +58,14 @@ export const RoutineDetail = () => {
         {
           workouts.map(workout => <div key={workout.id}>
           <h3 className="routineDetail__name" id={workout.name}>Name: {workout?.name}</h3> 
-          <h3 className="routineDetail__type" id={workout.type}>Type: {workout?.type}</h3>
+          <h3 className="routineDetail__type" id={workout.typeId}>Type: {workout?.type?.name}</h3>
           <h3 className="routineDetail__reps" id={workout.reps}>Reps: {workout?.reps}</h3>
           <h3 className="routineDetail__sets" id={workout.sets}>Sets: {workout?.sets}</h3> 
-          <button className="deleteRoutineBtn" id={routine?.id} onClick={deletedRoutine}>Release Routine</button>
-          <button className="deleteWorkoutBtn" id={workout?.id} onClick={handleDelete}>Release Workout</button>
-          <button className="editRoutineBtn" onClick={() => {
+          <Button className="deleteRoutineBtn" id={routine?.id} onClick={deletedRoutine}>Release Routine</Button>
+          <Button className="deleteWorkoutBtn" id={workout?.id} onClick={handleDelete}>Release Workout</Button>
+          <Button className="editRoutineBtn" onClick={() => {
             history.push(`/routines/edit/${workout.id}`)
-          }}>Edit</button>
+          }}>Edit</Button>
           <hr/>
           </div>
           )

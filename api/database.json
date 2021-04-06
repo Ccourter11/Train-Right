@@ -1,73 +1,104 @@
 {
   "workouts": [
     {
-      "id": 2,
-      "name": "Pull Up",
-      "typeId": 1,
-      "sets": 4,
-      "reps": 10,
+      "id": 1,
+      "name": "Lung",
+      "typeId": 2,
+      "sets": 10,
+      "reps": 12,
       "userId": 1
     },
     {
-      "name": "Goblet Squaat",
+      "name": "Squat Jump",
       "typeId": 2,
-      "sets": 5,
+      "sets": 3,
       "reps": 20,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "name": "Push Up",
+      "typeId": 1,
+      "sets": 10,
+      "reps": 10,
       "userId": 1,
       "id": 3
     },
     {
-      "name": "Jump rope",
-      "typeId": 2,
-      "sets": 3,
-      "reps": 100,
+      "name": "Pull Up",
+      "typeId": 1,
+      "sets": 4,
+      "reps": 12,
       "userId": 1,
       "id": 4
     },
     {
-      "name": "Push up",
-      "typeId": 1,
-      "sets": 12,
-      "reps": 10,
-      "userId": 2,
+      "name": "Calf Raises",
+      "typeId": 2,
+      "sets": 10,
+      "reps": 20,
+      "userId": 1,
       "id": 5
     },
     {
-      "id": 6,
-      "name": "Jogging",
-      "typeId": 2,
-      "sets": 29825,
-      "reps": 2000,
-      "userId": 2
+      "name": "Diamond Push Up",
+      "typeId": 1,
+      "sets": 12,
+      "reps": 10,
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "name": "Chin Up",
+      "typeId": 1,
+      "sets": 8,
+      "reps": 12,
+      "userId": 1,
+      "id": 7
     }
   ],
   "workoutRoutines": [
+    {
+      "routineId": 1,
+      "workoutId": 1,
+      "id": 1
+    },
     {
       "routineId": 1,
       "workoutId": 2,
       "id": 2
     },
     {
-      "routineId": 2,
-      "workoutId": 2,
+      "routineId": 1,
+      "workoutId": 5,
       "id": 3
     },
     {
-      "routineId": 1,
-      "workoutId": 6,
+      "routineId": 2,
+      "workoutId": 3,
       "id": 4
+    },
+    {
+      "routineId": 2,
+      "workoutId": 4,
+      "id": 5
+    },
+    {
+      "routineId": 2,
+      "workoutId": 6,
+      "id": 6
     }
   ],
   "routines": [
     {
-      "routineName": "Monday Funday",
-      "date": "2021-03-29",
-      "userId": 2,
+      "routineName": "Monday No Funday",
+      "date": "2021-04-05",
+      "userId": 1,
       "id": 1
     },
     {
-      "routineName": "Mix up!",
-      "date": "2021-03-29",
+      "routineName": "Tuesday is for my little arms",
+      "date": "2021-04-06",
       "userId": 1,
       "id": 2
     }

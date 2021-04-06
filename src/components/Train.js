@@ -11,6 +11,7 @@ export const Train = () => {
           return (
             <>          
              <NavBar />
+             {/* Train.js renders application views and application views renders home */}
              <ApplicationViews />
         
             </>

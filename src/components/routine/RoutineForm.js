@@ -8,6 +8,7 @@ export const RoutineForm = () => {
   const {saveRoutine, updateRoutine, getRoutineById} = useContext(RoutineContext)
   let currentUser = parseInt(sessionStorage.getItem(userStorageKey))
  //Define the intial state of the form inputs with useState()
+  
   const [routine, setRoutine] = useState({
     routineName: "",
     date: 0,
@@ -15,6 +16,7 @@ export const RoutineForm = () => {
   })
 
   const history = useHistory()
+  
   const [isLoading, setIsLoading] = useState(true);
   // include useParams from react-router-dom to allow the app to read a parameter from the URL
   const {routineId} = useParams()
@@ -27,7 +29,7 @@ export const RoutineForm = () => {
     let setVal = event.target.value
 
     newRoutine[event.target.id] = setVal
-    // Set the property to the new value using object bracket notation.
+    // Set the property to the new value using bracket notation.
 
     setRoutine(newRoutine)
       // update state
@@ -37,11 +39,14 @@ export const RoutineForm = () => {
   const handleClickSaveRoutine = () => {
     setIsLoading(true)
     if(routineId){
+      // checking to see if routineId exist
+      // if it does, use the updateRoutine function which will change the routine in the DB
       updateRoutine({routineName: routine.routineName,
                       id: routine.id,
                       date: routine.date})
       .then(()=> history.push(`/routines/detail/${routine.id}`))
     }else{
+      // if it doesnt exist it creates a new routine
       saveRoutine({
         routineName: routine.routineName,
         date: routine.date,
@@ -53,8 +58,11 @@ export const RoutineForm = () => {
   useEffect(()=>{
     if(routineId){
       getRoutineById(routineId)
+      // takes the routineId and finds that exact routine in your DB and returns that object
       .then(routine => {
         setRoutine(routine)
+        // routine in () represents whatever is returned by getRoutineById
+        // setRoutine changes the state to whatever routine is in my .then
         setIsLoading(false)
       })
     }else{
@@ -85,6 +93,7 @@ return (
           handleClickSaveRoutine()}}>
         {"Save Routine"}
       </button>
+      <br />
   </form>
 )
 }

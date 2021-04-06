@@ -3,13 +3,14 @@ import { useHistory, useParams } from "react-router-dom"
 import { WorkoutContext } from "./WorkoutProvider"
 import "./Workout.css"
 import { userStorageKey } from "../auth/authSettings"
+import Button from 'react-bootstrap/Button'
 
 
 
 export const WorkoutForm = () => {
     const { types, getTypes, addWorkout, getWorkouts, updateWorkout, getWorkoutById } = useContext(WorkoutContext) 
     let currentUser = parseInt(sessionStorage.getItem(userStorageKey))
-    // let userWorkouts = types.filter(type => currentUser === type.userId)
+   
 
     // the reason the setIsLoading's initial state is set to true is that your whole component actually is in such state initially and then you set it to false after fetched data is ready
     const [ isLoading, setIsLoading ] = useState(true);
@@ -85,6 +86,7 @@ export const WorkoutForm = () => {
   }, [])
 
     useEffect(() => {
+      // will need to get rid of getWorkouts here below
       getWorkouts().then(() => {
 
           // if there is data
@@ -111,6 +113,7 @@ export const WorkoutForm = () => {
 
     return (
       
+      
         <form className="workoutForm">
           <h2 className="workoutForm__title">Workout Form</h2>
           <fieldset className="form-group">
@@ -118,14 +121,9 @@ export const WorkoutForm = () => {
             <input type="text" id="name" onChange={handleControlledInputChange} value={workout.name} required autoFocus placeholder="Name..."></input>
           </fieldset>
 
-          {/* <fieldset className="form-group">
-            <label htmlFor="type">Type: </label>
-            <input type="dropdown" id="type" onChange={handleControlledInputChange} value={workout.type} required placeholder="Upper or Lower.."></input>
-          <label htmlFor="upperBody">Type: </label>
-          </fieldset> */}
-
           <fieldset className="form-group">
           <label htmlFor="type">Type: </label>
+          {/* <Form.Control > */}
            <select value={workout.typeId} id="typeId" className="upper-lower" onChange={handleControlledInputChange}>
 
            <option value="0">Upper Or Lower</option>
@@ -138,7 +136,9 @@ export const WorkoutForm = () => {
                 </option>
             ))}
              </select> 
+             {/* </Form.Control> */}
            </fieldset>
+           
           <fieldset className="form-group">
             <label htmlFor="reps">Reps: </label>
             <input type="number" id="reps" onChange={handleControlledInputChange} value={workout.reps} required></input>
@@ -147,9 +147,10 @@ export const WorkoutForm = () => {
             <label htmlFor="sets">Sets: </label>
             <input type="number" id="sets" onChange={handleControlledInputChange} value={workout.sets} required></input>
           </fieldset>
-          <button variant="primary" className="btn" onClick={handleSaveWorkout}>
+          <Button variant="primary" className="btn" onClick={handleSaveWorkout}>
             Save Workout
-          </button>
+          </Button>
+          <br />
         </form>
       )
     }

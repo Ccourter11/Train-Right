@@ -18,6 +18,7 @@ const getWorkouts = () => {
       // from json to JS^
       .then(workouts => setWorkouts(workouts))
        // sets response to the state var workouts
+      //  set state function which retrigger 
   }
 
   const addWorkout = workouts => {
@@ -31,21 +32,6 @@ const getWorkouts = () => {
       // get the new object back
     .then(getWorkouts)
   }
-
-  // function to get workout by ID
-  const getWorkoutById = (id) => {
-    return fetch(`http://localhost:8088/workouts/${id}`)
-        .then(res => res.json())
-  }
-  
-  // function to delete a workout
-  const releaseWorkout = workoutId => {
-    return fetch(`http://localhost:8088/workouts/${workoutId}`, {
-        method: "DELETE"
-    })
-        .then(getWorkouts)
-  }
-
   // function to edit an workout
   const updateWorkout = workout => {
     return fetch(`http://localhost:8088/workouts/${workout.id}`, {
@@ -57,6 +43,21 @@ const getWorkouts = () => {
     })
     .then(getWorkouts)
   }
+
+  // function to get workout by ID
+  const getWorkoutById = (id) => {
+    return fetch(`http://localhost:8088/workouts/${id}?_expand=type`)
+        .then(res => res.json())
+  }
+  
+  // function to delete a workout
+  const releaseWorkout = workoutId => {
+    return fetch(`http://localhost:8088/workouts/${workoutId}`, {
+        method: "DELETE"
+    })
+        .then(getWorkouts)
+  }
+
   // function to add workout to routine
   const AddedWorkout = workoutsRoutine => {
     return fetch("http://localhost:8088/workoutRoutines", {
@@ -79,6 +80,10 @@ const getWorkouts = () => {
     .then(response => response.json())
     .then(response => setTypes(response))
   }
+  // const getTypesByName = (name) => {
+  //   return fetch(`http://localhost:8088/types/${name}`)
+  //       .then(res => res.json())
+  // }
   
    /*
       You return a context provider which has the

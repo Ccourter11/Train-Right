@@ -9,7 +9,8 @@ export const WorkoutSearch = () => {
   return (
     <>
     <div className="searchBtn">
-    <h2>Workout Search:</h2>
+    <h2>Workout Search </h2>
+    
       <input type="text"
         className="input--wide"
         onKeyUp={(event) => setSearchTerms(event.target.value)}

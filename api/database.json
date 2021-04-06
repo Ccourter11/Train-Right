@@ -2,10 +2,10 @@
   "workouts": [
     {
       "id": 1,
-      "name": "Lungeseses",
-      "typeId": 1,
-      "sets": 120314,
-      "reps": 1112,
+      "name": "Lung",
+      "typeId": 2,
+      "sets": 10,
+      "reps": 12,
       "userId": 1
     },
     {
@@ -25,46 +25,80 @@
       "id": 3
     },
     {
-      "id": 4,
-      "name": "Hannah Hall",
+      "name": "Pull Up",
+      "typeId": 1,
+      "sets": 4,
+      "reps": 12,
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "name": "Calf Raises",
       "typeId": 2,
       "sets": 10,
+      "reps": 20,
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "name": "Diamond Push Up",
+      "typeId": 1,
+      "sets": 12,
+      "reps": 10,
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "name": "Chin Up",
+      "typeId": 1,
+      "sets": 8,
       "reps": 12,
-      "userId": 1
+      "userId": 1,
+      "id": 7
     }
   ],
   "workoutRoutines": [
     {
-      "routineId": 0,
-      "workoutId": 1,
-      "id": 1
-    },
-    {
       "routineId": 1,
       "workoutId": 1,
-      "id": 2
+      "id": 1
     },
     {
       "routineId": 1,
       "workoutId": 2,
+      "id": 2
+    },
+    {
+      "routineId": 1,
+      "workoutId": 5,
       "id": 3
     },
     {
       "routineId": 2,
-      "workoutId": 4,
+      "workoutId": 3,
       "id": 4
+    },
+    {
+      "routineId": 2,
+      "workoutId": 4,
+      "id": 5
+    },
+    {
+      "routineId": 2,
+      "workoutId": 6,
+      "id": 6
     }
   ],
   "routines": [
     {
-      "routineName": "Tuesday WhosDay",
-      "date": "2021-03-30",
+      "routineName": "Monday No Funday",
+      "date": "2021-04-05",
       "userId": 1,
       "id": 1
     },
     {
-      "routineName": "Monday",
-      "date": "2021-04-05",
+      "routineName": "Tuesday is for my little arms",
+      "date": "2021-04-06",
       "userId": 1,
       "id": 2
     }

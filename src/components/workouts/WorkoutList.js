@@ -52,12 +52,14 @@ export const WorkoutList = () => {
 
       return (
         <>  
+        {/* <img className="logo" src="../trainright.png" /> */}
         <h2 className="workouts__title">Workouts</h2>
         <div className="createBtn">
         <Button onClick={() => history.push("/workouts/create")}>
           Create Workout
         </Button>
         </div>
+
        
         <div className="workouts">
           <div className="typeBtn">

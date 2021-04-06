@@ -150,6 +150,7 @@ export const WorkoutForm = () => {
           <Button variant="primary" className="btn" onClick={handleSaveWorkout}>
             Save Workout
           </Button>
+          <br />
         </form>
       )
     }
